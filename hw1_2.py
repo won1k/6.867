@@ -60,6 +60,7 @@ plt.show()
 # 2.2
 
 def SSE(X, Y, weights):
+	M = len(weights) - 1
 	phi = []
 	for i in range(M + 1):
 		phi.append([x**i for x in X])
@@ -67,13 +68,26 @@ def SSE(X, Y, weights):
 	return np.linalg.norm(np.dot(phi, weights) - Y)**2
 
 def gradSSE(X, Y, weights):
+	M = len(weights) - 1
 	phi = []
 	for i in range(M + 1):
 		phi.append([x**i for x in X])
 	phi = np.transpose(np.array(phi))
 	return 2*np.dot(np.transpose(phi), np.dot(phi, weights) - Y)
 
+def finiteDiff(obj, diff_size, w):
+	d = len(w)
+	finiteGrad = np.zeros(d)
+	for i in range(d):
+		unit = np.zeros(d)
+		unit[i] = diff_size
+		finiteGrad[i] = (obj(X, Y, w + unit) - obj(X, Y, w - unit))/(2*diff_size)
+	return finiteGrad
+
 weights = [[1,1], [5,3,4], [-5,5,-5,5], [1,1,1,1,1,1,1,1,-1]]
+diff_size = 0.1
+for weight in weights:
+	np.linalg.norm(gradSSE(X, Y, weight) - finiteDiff(SSE, diff_size, weight))
 
 
 
