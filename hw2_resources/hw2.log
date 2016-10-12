@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.27)  11 OCT 2016 21:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.27)  12 OCT 2016 12:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -319,36 +319,118 @@ e
 <hw2_1-1_1.pdf, id=1, 578.16pt x 433.62pt>
 File: hw2_1-1_1.pdf Graphic file (type pdf)
  <use hw2_1-1_1.pdf>
-Package pdftex.def Info: hw2_1-1_1.pdf used on input line 73.
+Package pdftex.def Info: hw2_1-1_1.pdf used on input line 79.
 (pdftex.def)             Requested size: 131.31204pt x 98.47998pt.
+
+<hw2_1-2_1.pdf, id=2, 578.16pt x 433.62pt>
+File: hw2_1-2_1.pdf Graphic file (type pdf)
+ <use hw2_1-2_1.pdf>
+Package pdftex.def Info: hw2_1-2_1.pdf used on input line 83.
+(pdftex.def)             Requested size: 131.31204pt x 98.47998pt.
+
+<hw2_1-2_2.pdf, id=3, 578.16pt x 433.62pt>
+File: hw2_1-2_2.pdf Graphic file (type pdf)
+ <use hw2_1-2_2.pdf>
+Package pdftex.def Info: hw2_1-2_2.pdf used on input line 87.
+(pdftex.def)             Requested size: 131.31204pt x 98.47998pt.
+
+<hw2_1-2_3.pdf, id=4, 578.16pt x 433.62pt>
+File: hw2_1-2_3.pdf Graphic file (type pdf)
+ <use hw2_1-2_3.pdf>
+Package pdftex.def Info: hw2_1-2_3.pdf used on input line 91.
+(pdftex.def)             Requested size: 131.31204pt x 98.47998pt.
+
+<hw2_1-2_4.pdf, id=5, 578.16pt x 433.62pt>
+File: hw2_1-2_4.pdf Graphic file (type pdf)
+ <use hw2_1-2_4.pdf>
+Package pdftex.def Info: hw2_1-2_4.pdf used on input line 100.
+(pdftex.def)             Requested size: 131.31204pt x 98.47998pt.
+
+<hw2_1-2_6.pdf, id=6, 578.16pt x 433.62pt>
+File: hw2_1-2_6.pdf Graphic file (type pdf)
+ <use hw2_1-2_6.pdf>
+Package pdftex.def Info: hw2_1-2_6.pdf used on input line 104.
+(pdftex.def)             Requested size: 131.31204pt x 98.47998pt.
+
+<hw2_1-2_8.pdf, id=7, 578.16pt x 433.62pt>
+File: hw2_1-2_8.pdf Graphic file (type pdf)
+ <use hw2_1-2_8.pdf>
+Package pdftex.def Info: hw2_1-2_8.pdf used on input line 108.
+(pdftex.def)             Requested size: 131.31204pt x 98.47998pt.
+
+<hw2_1-2_10.pdf, id=8, 578.16pt x 433.62pt>
+File: hw2_1-2_10.pdf Graphic file (type pdf)
+ <use hw2_1-2_10.pdf>
+Package pdftex.def Info: hw2_1-2_10.pdf used on input line 112.
+(pdftex.def)             Requested size: 131.31204pt x 98.47998pt.
+
+<hw2_1-3_1.pdf, id=9, 578.16pt x 433.62pt>
+File: hw2_1-3_1.pdf Graphic file (type pdf)
+ <use hw2_1-3_1.pdf>
+Package pdftex.def Info: hw2_1-3_1.pdf used on input line 132.
+(pdftex.def)             Requested size: 199.82988pt x 149.87033pt.
+
+Underfull \vbox (badness 2689) has occurred while \output is active []
+
  [1{/usr/local/texlive/2016basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map} 
-<./hw2_1-1_1.pdf>] [2] (./hw2.aux) ) 
+<./hw2_1-1_1.pdf> <./hw2_1-2_1.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_1-2_1.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./hw2_1-2_2.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_1-2_2.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./hw2_1-2_3.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_1-2_3.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>] [2 <./hw2_1-2_4.pdf> <./hw2_1-2_6.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_1-2_6.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./hw2_1-2_8.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_1-2_8.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./hw2_1-2_10.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_1-2_10.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+> <./hw2_1-3_1.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_1-3_1.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>] [3] (./hw2.aux) ) 
 Here is how much of TeX's memory you used:
- 4516 strings out of 494447
- 64639 string characters out of 6166766
- 129621 words of memory out of 5000000
- 7643 multiletter control sequences out of 15000+600000
- 9648 words of font info for 38 fonts, out of 8000000 for 9000
+ 4564 strings out of 494447
+ 65395 string characters out of 6166766
+ 132621 words of memory out of 5000000
+ 7680 multiletter control sequences out of 15000+600000
+ 10894 words of font info for 43 fonts, out of 8000000 for 9000
  480 hyphenation exceptions out of 8191
- 42i,9n,40p,1222b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016basic/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016basic/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2016basic/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016basic/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016ba
-sic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/201
-6basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/
-2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
-ve/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/tex
-live/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
-exlive/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local
-/texlive/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
-ocal/texlive/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></us
-r/local/texlive/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on hw2.pdf (2 pages, 143167 bytes).
+ 42i,10n,40p,1277b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016basic/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016basic/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2016basic/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016basic/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016basic/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2016basic/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2016basic/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2016basic/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016basic/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2016basi
+c/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016ba
+sic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016
+basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/20
+16basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/tex
+live/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/
+texlive/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on hw2.pdf (3 pages, 254955 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 288 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -8,8 +8,8 @@ def logisticLoss(X, Y, w, w0, lamb):
     return NLL(X, Y, w, w0) + lamb * np.linalg.norm(w)
 
 def logisticGrad(X, Y, w, w0, lamb):
-    dEdw0 = -10*np.mean(Y * np.exp(-Y * (w0 + np.dot(X,w).reshape(len(X),1))) / (1 + np.exp(-Y * (w0 + np.dot(X,w).reshape(len(X),1)))))
-    dEdw = -10*np.mean(Y*X*np.exp(Y*((w0) + np.dot(X,w).reshape(len(X),1)))/(1+np.exp(Y*((w0) + np.dot(X,w).reshape(len(X),1))))) + 2*lamb*w
+    dEdw0 = -np.sum(Y * np.exp(-Y * (w0 + np.dot(X,w).reshape(len(X),1))) / (1 + np.exp(-Y * (w0 + np.dot(X,w).reshape(len(X),1)))))
+    dEdw = -np.sum(Y*X*np.exp(Y*((w0) + np.dot(X,w).reshape(len(X),1)))/(1+np.exp(Y*((w0) + np.dot(X,w).reshape(len(X),1))))) + 2*lamb*w
     return dEdw, dEdw0
 
 def GradientDescent(X, Y, loss, grad, lamb, init, epochs, step, eps):

@@ -65,19 +65,74 @@ We begin by investigating the effects of regularization ($L_1$ and $L_2$) on log
 $$E_{LR}(w, w_0) \equiv NLL(w, w_0) + \lambda\|w\|_k^k$$
 where $k = 1, 2$, and $NLL$ is the negative log-likelihood loss for logistic regression. We note that such classifiers can be trained efficiently via gradient descent, with the gradient term being given by (using $L_2$ as an example):
 $$\frac{\partial E_{LR}}{\partial dw_j} = \frac{\partial NLL}{\partial dw_j} + \lambda \frac{\partial \|w\|_k^k}{\partial w_j} = \left\{ \begin{matrix} -\sum_i \frac{y^{(i)} e^{-y^{(i)}(wx^{(i)} + w_0)}}{1 + e^{-y^{(i)}(wx^{(i)} + w_0)}} & j =0 \\ -\sum_i \frac{y^{(i)} x^{(i)}_j e^{-y^{(i)}(wx^{(i)} + w_0)}}{1 + e^{-y^{(i)}(wx^{(i)} + w_0)}} + 2\lambda w_j & j \neq 0 \end{matrix}  \right.$$
-To explore the effects of regularization, we first consider the non-regularized case, with $\lambda = 0$. {\bf Figure 1(a)} shows that, as expected, the magnitude of the weight vector goes to infinity as the number of iterations of gradient descent grows large. (For the purposes of illustration, we used a deliberately small step size, $\eta = 10^{-4}$.) When we include regularization at $\lambda = 1$, however, the magnitude of the weight vector stabilizes, even as the number of iterations becomes large.
+To explore the effects of regularization, we first consider the non-regularized case, with $\lambda = 0$. {\bf Figure 1(a)} shows that, as expected, the magnitude of the weight vector goes to infinity as the number of iterations of gradient descent grows large. (For the purposes of illustration, we used a deliberately small step size, $\eta = 10^{-4}$.) Even when we include $L_2$ regularization at $\lambda = 1$, the magnitude of the weight vector diverges, indicating that the regularization is not strong enough to counteract the tendency of logistic regression to yield large weights towards a step function. However, when we add regularization terms of size $\lambda = 5, 10$, the weights stabilize at a finite value, with higher regularization yielding lower-magnitude weights, as expected.
+
+To understand the impact of using $L_1$ compared to $L_2$ regularization, we conduct a systematic analysis of how the weights of the logistic regression model behave under each method. We vary values of $\lambda$ and fit our model to 4 artificial 2D datasets using both regularization methods, and provide results from dataset 1 for illustrative purposes. {\bf Figure 1(b)-(d)} demonstrates our results. In terms of classification accuracy (Figure 1(b)), we see that regardless of regularization strength ($\lambda$), the $L_2$-regularized model yields near-perfect performance on both training and validation. However, the $L_1$-regularized model drops to random chance (i.e. accuracy is 50\%) after a certain threshold $\lambda$. This is explained by Figure 1(c) and (d), which shows that beyond these threshold values of $\lambda$, the weight vector becomes essentially 0, so the model does not learn anything under $L_1$ regularization. This result is in line with our intuition about $L_1$ regularization, as it is known to yield sparse weight vectors. Figure 1(d) especially demonstrates this phenomenon, in which both $w_1$ and $w_2$ go to 0 after $\lambda \approx 400$ for $L_1$ but $w_2$ remains nonzero even at $\lambda \geq 1000$ for $L_2$.
+
+{\bf Figure 2} further illuminates this idea by depicting the decision boundaries of the regularized logistic regression models. We see that when $\lambda$ is small, both $L_1$ and $L_2$ regularization yield reasonable decision boundaries that obtain perfect classification of all points. On the other hand, for $\lambda =10$, both regularization schemes yield a flatter decision boundary, with partial classification error. However, the $L_2$-regularized model yields a slightly non-zero sloped boundary that is able to capture some of the classification features, whereas the sparsity from $L_1$ yields a very flat boundary that leads to lower accuracy.
+
+Finally, we examine which regularizer yields the best performance in terms of classification accuracy on an unseen test set, when the regularization strength is selected based on validation. We find that this choice depends strongly on the dataset. For example, on datasets 1 and 2, in which the training and validation sets are rather similar, the $L_1$ regularizer with modest $\lambda$ strength of $0.01$ fares best on the validation set. Unfortunately, the lack of complete separability on the test set yields lower accuracy for dataset 2. On the other hand, for dataset 3, there are a number of points in the validation set that are misclassified (high $x_1$, lower $x_2$) if the boundary is fit too closely to the training set, so a higher $\lambda$ value is favored, which yields higher accuracy on the test set. Finally, nonsensical values are given for dataset 4, which is highly not linearly separable.
 
 \begin{figure}[b]
 	\centering
 	\begin{subfigure}[b]{0.23\textwidth}
 		\includegraphics[width=\textwidth]{hw2_1-1_1.pdf}
-		\caption{(1,1)}
+		\caption{}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.23\textwidth}
-		%\includegraphics[width=\textwidth]{hw1_1-1_1.pdf}
-		\caption{(5,5)}
+		\includegraphics[width=\textwidth]{hw2_1-2_1.pdf}
+		\caption{Accuracy}
 	\end{subfigure}
-	\caption{Squared distance to correct solution $u$ using the negative Gaussian function for various starting points, step sizes, and convergence criteria. The labels on the plots are the starting points.}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_1-2_2.pdf}
+		\caption{$\|w\|_2$}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_1-2_3.pdf}
+		\caption{$w_1, w_2$}
+	\end{subfigure}
+	\caption{Effects of regularization on the weights (coefficients) of logistic regression model for various values of $\lambda$, and under $L_1$ vs. $L_2$ regularization.}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_1-2_4.pdf}
+		\caption{$L_1, \lambda = 0.1$}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_1-2_6.pdf}
+		\caption{$L_1, \lambda = 10$}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_1-2_8.pdf}
+		\caption{$L_2, \lambda = 0.1$}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_1-2_10.pdf}
+		\caption{$L_2, \lambda = 10$}
+	\end{subfigure}
+	\caption{Decision boundaries for the training set for artificial dataset 1, for $L_1$ vs $L_2$ regularization.}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.4\textwidth}
+		\centering
+		\begin{tabular}{c|c|c|c}\hline
+			Dataset & Regularizer & $\lambda$ & Accuracy\\\hline
+			1 & $L_1$ & 0.01 & 1 \\
+			2 & $L_1$ & 0.01 & 0.805\\
+			3 & $L_2$ & 0.3& 0.96  \\
+			4 & $L_1$ & 100& 0.5 \\\hline
+		\end{tabular}
+		\caption{Regularizer and $\lambda$ Values}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.35\textwidth}
+		\includegraphics[width=\textwidth]{hw2_1-3_1.pdf}
+		\caption{Accuracy}
+	\end{subfigure}
+	\caption{Best-performing regularizers and $\lambda$ values for each artificial dataset (selected on validation), with classification accuracy on corresponding test set.}
 \end{figure}
 
 \section{Support Vector Machine}
