@@ -8,7 +8,7 @@
 \usepackage{subcaption}
 \usepackage{graphicx}
 \usepackage{caption}
-\usepackage[margin=0.3in]{geometry}
+\usepackage[margin=0.5in]{geometry}
 
 %--------Theorem Environments--------
 %theoremstyle{plain} --- default
@@ -65,13 +65,13 @@ We begin by investigating the effects of regularization ($L_1$ and $L_2$) on log
 $$E_{LR}(w, w_0) \equiv NLL(w, w_0) + \lambda\|w\|_k^k$$
 where $k = 1, 2$, and $NLL$ is the negative log-likelihood loss for logistic regression. We note that such classifiers can be trained efficiently via gradient descent, with the gradient term being given by (using $L_2$ as an example):
 $$\frac{\partial E_{LR}}{\partial dw_j} = \frac{\partial NLL}{\partial dw_j} + \lambda \frac{\partial \|w\|_k^k}{\partial w_j} = \left\{ \begin{matrix} -\sum_i \frac{y^{(i)} e^{-y^{(i)}(wx^{(i)} + w_0)}}{1 + e^{-y^{(i)}(wx^{(i)} + w_0)}} & j =0 \\ -\sum_i \frac{y^{(i)} x^{(i)}_j e^{-y^{(i)}(wx^{(i)} + w_0)}}{1 + e^{-y^{(i)}(wx^{(i)} + w_0)}} + 2\lambda w_j & j \neq 0 \end{matrix}  \right.$$
-To explore the effects of regularization, we first consider the non-regularized case, with $\lambda = 0$. {\bf Figure 1(a)} shows that, as expected, the magnitude of the weight vector goes to infinity as the number of iterations of gradient descent grows large. (For the purposes of illustration, we used a deliberately small step size, $\eta = 10^{-4}$.) Even when we include $L_2$ regularization at $\lambda = 1$, the magnitude of the weight vector diverges, indicating that the regularization is not strong enough to counteract the tendency of logistic regression to yield large weights towards a step function. However, when we add regularization terms of size $\lambda = 5, 10$, the weights stabilize at a finite value, with higher regularization yielding lower-magnitude weights, as expected.
+\subsection{Regularization and Weights} To explore the effects of regularization, we first consider the non-regularized case, with $\lambda = 0$. {\bf Figure 1(a)} shows that, as expected, the magnitude of the weight vector goes to infinity as the number of iterations of gradient descent grows large. (For the purposes of illustration, we used a deliberately small step size, $\eta = 10^{-4}$.) Even when we include $L_2$ regularization at $\lambda = 1$, the magnitude of the weight vector diverges, indicating that the regularization is not strong enough to counteract the tendency of logistic regression to yield large weights towards a step function. However, when we add regularization terms of size $\lambda = 5, 10$, the weights stabilize at a finite value, with higher regularization yielding lower-magnitude weights, as expected.
 
-To understand the impact of using $L_1$ compared to $L_2$ regularization, we conduct a systematic analysis of how the weights of the logistic regression model behave under each method. We vary values of $\lambda$ and fit our model to 4 artificial 2D datasets using both regularization methods, and provide results from dataset 1 for illustrative purposes. {\bf Figure 1(b)-(d)} demonstrates our results. In terms of classification accuracy (Figure 1(b)), we see that regardless of regularization strength ($\lambda$), the $L_2$-regularized model yields near-perfect performance on both training and validation. However, the $L_1$-regularized model drops to random chance (i.e. accuracy is 50\%) after a certain threshold $\lambda$. This is explained by Figure 1(c) and (d), which shows that beyond these threshold values of $\lambda$, the weight vector becomes essentially 0, so the model does not learn anything under $L_1$ regularization. This result is in line with our intuition about $L_1$ regularization, as it is known to yield sparse weight vectors. Figure 1(d) especially demonstrates this phenomenon, in which both $w_1$ and $w_2$ go to 0 after $\lambda \approx 400$ for $L_1$ but $w_2$ remains nonzero even at $\lambda \geq 1000$ for $L_2$.
+\subsection{$L_1$ vs. $L_2$ Regularization}To understand the impact of using $L_1$ compared to $L_2$ regularization, we conduct a systematic analysis of how the weights of the logistic regression model behave under each method. We vary values of $\lambda$ and fit our model to 4 artificial 2D datasets using both regularization methods, and provide results from dataset 1 for illustrative purposes. {\bf Figure 1(b)-(d)} demonstrates our results. In terms of classification accuracy (Figure 1(b)), we see that regardless of regularization strength ($\lambda$), the $L_2$-regularized model yields near-perfect performance on both training and validation. However, the $L_1$-regularized model drops to random chance (i.e. accuracy is 50\%) after a certain threshold $\lambda$. This is explained by Figure 1(c) and (d), which shows that beyond these threshold values of $\lambda$, the weight vector becomes essentially 0, so the model does not learn anything under $L_1$ regularization. This result is in line with our intuition about $L_1$ regularization, as it is known to yield sparse weight vectors. Figure 1(d) especially demonstrates this phenomenon, in which both $w_1$ and $w_2$ go to 0 after $\lambda \approx 400$ for $L_1$ but $w_2$ remains nonzero even at $\lambda \geq 1000$ for $L_2$.
 
 {\bf Figure 2} further illuminates this idea by depicting the decision boundaries of the regularized logistic regression models. We see that when $\lambda$ is small, both $L_1$ and $L_2$ regularization yield reasonable decision boundaries that obtain perfect classification of all points. On the other hand, for $\lambda =10$, both regularization schemes yield a flatter decision boundary, with partial classification error. However, the $L_2$-regularized model yields a slightly non-zero sloped boundary that is able to capture some of the classification features, whereas the sparsity from $L_1$ yields a very flat boundary that leads to lower accuracy.
 
-Finally, we examine which regularizer yields the best performance in terms of classification accuracy on an unseen test set, when the regularization strength is selected based on validation. We find that this choice depends strongly on the dataset. For example, on datasets 1 and 2, in which the training and validation sets are rather similar, the $L_1$ regularizer with modest $\lambda$ strength of $0.01$ fares best on the validation set. Unfortunately, the lack of complete separability on the test set yields lower accuracy for dataset 2. On the other hand, for dataset 3, there are a number of points in the validation set that are misclassified (high $x_1$, lower $x_2$) if the boundary is fit too closely to the training set, so a higher $\lambda$ value is favored, which yields higher accuracy on the test set. Finally, nonsensical values are given for dataset 4, which is highly not linearly separable.
+\subsection{Hyperparameter Selection by Validation} Finally, we examine which regularizer yields the best performance in terms of classification accuracy on an unseen test set, when the regularization strength is selected based on validation. We find that this choice depends strongly on the dataset. For example, on datasets 1 and 2, in which the training and validation sets are rather similar, the $L_1$ regularizer with modest $\lambda$ strength of $0.01$ fares best on the validation set. Unfortunately, the lack of complete separability on the test set yields lower accuracy for dataset 2. On the other hand, for dataset 3, there are a number of points in the validation set that are misclassified (high $x_1$, lower $x_2$) if the boundary is fit too closely to the training set, so a higher $\lambda$ value is favored, which yields higher accuracy on the test set. Finally, nonsensical values are given for dataset 4, which is highly not linearly separable.
 
 \begin{figure}[b]
 	\centering
@@ -137,33 +137,159 @@ Finally, we examine which regularizer yields the best performance in terms of cl
 
 \section{Support Vector Machine}
 
+Rather than using a discriminative probabilistic model, such as logistic regression, we can also employ a discriminant rule to directly classify points. One example of such a classifier is the support vector machine (SVM), of which the simplest variant is the linear SVM, using no feature transformations. The linear SVM minimizes the following Lagrangian:
+$$L(w, b, \xi, a, \mu) = \frac{1}{2}\|w\|^2 + C\sum_n \xi_n - \sum_n a_n(y^n f(x_n) - 1+ \xi_n) - \sum_n \mu_n \xi_n$$
+which is equivalent to maximizing the margin while penalizing classification error. Rather than solve this problem directly, however, it is often more convenient to consider the dual Lagrangian for this problem, which is given by:
+$$\tilde{L}(a) = \sum_n a_n - \frac{1}{2} \sum_n \sum_m a_na_m y_ny_m K(x_n,x_m) = 1^T a - \frac{1}{2} a^T(YKY)a$$
+where we define $a = (a_1, \dots, a_n)$, $Y = diag(y)$, and $1 = (1, \dots, 1)$, with the kernel:
+$$K(x,x') = x^Tx'$$
+This Lagrangian is then maximized with the constraints $0\leq a_n \leq C$ and $\sum_n a_ny_n = 0$.
+
+\subsection{Implementation Tests} For a simple dataset given in {\bf Figure 4(a)}, we achieve a dual objective value of $-0.154$, and find that the Lagrange multiplier values are (approximately) $ \alpha = (0.154, 0, 0.154, 0)$, so that the support vectors are the first and third examples. {\bf Figure 4(b)} makes this claim appear reasonable, as a hyperplane separating the sets of points would be closest to the first and third examples, as the solutions indicate.
+
+\begin{figure}[h!]
+	\centering
+\begin{subfigure}[b]{0.15\textwidth}
+	\centering
+\begin{tabular}{|c|c|c|}\hline
+$x_1$ & $x_2$ & $y$ \\\hline
+2 & 2 & 1 \\
+2 & 3 & 1 \\
+0 & -1 & -1\\
+-3 & -2 & -1\\\hline
+\end{tabular}
+\vspace{0.3in}
+\caption{}
+\end{subfigure}
+\begin{subfigure}[b]{0.3\textwidth}
+\includegraphics[width=\textwidth]{hw2-2_1-1.png}
+\caption{}
+\end{subfigure}
+\begin{subfigure}[b]{0.3\textwidth}
+	\includegraphics[width=\textwidth]{hw2_2-2_acc.pdf}
+	\caption{}
+\end{subfigure}
+\caption{Simple dataset for testing linear SVM implementation (a, b), and (c) classification accuracy on test set of artificial datasets.}
+\end{figure}
+
+\subsection{Comparisons on Artificial Datasets} To explore the differences in classification between the logistic regression, we apply the linear SVM model detailed above to the artificial datasets used in Section 1, using a soft margin parameter of $C = 1$. As in the case of logistic regression, we provide in {\bf Figure 4(c)} the classification accuracy for the linear SVM model on each artificial test dataset, where the model is trained on the respective training set. The plot is very similar to that of {\bf Figure 3(b)}, which is the corresponding classification accuracies achieved by fine-tuned logistic regression classifiers, despite no hyperparameter selection (for $C$) for the linear SVM classifiers.
+
+Moreover, {\bf Figure 5} depicts the resulting decision boundaries for the training set of each artificial dataset, which provides further evidence on the correctness of the implementation, as the boundaries appear reasonable in separating the classes when the data is linearly separable. A comparison between {\bf Figure 5(a)} and {\bf Figure 2} suggests that compared to the logistic regression model, the linear SVM does in fact learn a higher-margin classifer than logistic regression with either regularization. It is interesting to note that this higher-margin property does indeed yield a visually ``cleaner'' boundary, which holds for the other datasets as well (not displayed here for space considerations).
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_2-2_1_train.pdf}
+		\caption{Dataset 1}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_2-2_2_train.pdf}
+		\caption{Dataset 2}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_2-2_3_train.pdf}
+		\caption{Dataset 3}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_2-2_4_train.pdf}
+		\caption{Dataset 4}
+	\end{subfigure}
+	\caption{Decision boundaries for the training set for artificial datasets 1 through 4, using linear SVM with $C = 1$.}
+\end{figure}
+
+\subsection{Hyperparameters for Linear and Gaussian RBF Kernels}
+
+\begin{figure}[b]
+	\centering
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2-2_3_linmargins.pdf}
+		\caption{Margin Sizes, Linear Kernel}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2-2_3_linsv.pdf}
+		\caption{Support Vectors, Linear Kernel}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2-2_3_gausmargins.pdf}
+		\caption{Margin Sizes, Gaussian Kernel}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2-2_3_gaussv.pdf}
+		\caption{Support Vectors, Gaussian Kernel}
+	\end{subfigure}
+	\caption{Margin sizes and number of support vectors for varying $C$ (for linear kernels) as well as $\gamma$ (for Gaussian kernels).}
+\end{figure}
+
+
 \section{Support Vector Machine with Pegasos}
 
+An equivalent formulation of the linear SVM (C-SVM) employed in Section 2 is the Soft-SVM using hinge loss. That is, the objective of the C-SVM:
+$$\min_w C \sum_n \xi_n+ \frac{1}{2}\|w\|^2$$
+can equivalently be written in terms of the hinge loss as:
+$$\min_w \frac{\lambda}{2} \|w\|^2  + \sum_n [1-y_n(w^Tx_n)]_+$$
+which automatically incorporates the slack constraints as part of the objective. This objective function can then be minimized using the Pegasos algorithm to yield direct solutions $\hat{w}$. In order to compare the results obtained by Pegasos to standard dual formulations of the C-SVM, we begin by exploring the dependence of the algorithm on $\lambda$ and hyperparameters of the basis functions, as in the previous sections. For all experiments, we fix the maximum number of epochs (of training) at $20 \cdot N$, where $N$ is the size of the data, as recommended by Sontag et al.\footnote{http://cs.nyu.edu/~dsontag/courses/ml16/slides/lecture5.pdf}
+
+\subsection{Dependence on $\lambda$} We first consider the regularization parameter $\lambda$ by investigating the dependence of the weights $w$ and the corresponding margin sizes $1/\|w\|$ on the regularization. From the objective function given for the Soft-SVM, it is expected that as $\lambda$ increases, we penalize small margins (large $\|w\|$) more strongly than achieving low classification error, and so our margin sizes should rise at the cost of potentially more misclassified points in the training set.
+
+{\bf Figure 7} demonstrates this behavior, where we used artificial dataset 3 for illustrative purposes. As suspected, increasing the regularization strength $\lambda$ yields a larger-margin classifier, but with higher (at least nondecreasing) numbers of misclassified points. In {\bf Figure 7(a)}, we see that the margin size $1/\|w\|$ does in fact tend to rise with the regularization strength. Interestingly, however, the $\lambda = 1$ yields a decline in margin size, which appears to suggest an issue in the optimization during cases with high regularization; note that with the equivalence of $C = 1/n\lambda$, we see that $\lambda = 1$ in this case would correspond to $C = 1/n$, which is an extreme value that can yield numerical instability.
+
+On the other hand, {\bf Figures 7(b)-(d)} illustrate the fact that as $\lambda$ increases, more and more points end up on the wrong side of the decision boundary, as classification accuracy is sacrificed for larger margin sizes. Indeed, for $\lambda = 2^{-10}$, the decision boundary and classification of points is indistinguishable from the boundary given for the C-SVM in {\bf Figure 5(c)}, and this behavior persists for low $\lambda$ values (i.e. $\lambda \leq 2^{-8}$). As $\lambda$ increases however, the boundary becomes steeper due to penalization of the magnitude of $w_2$, which thereby becomes lower and the normal vector becomes more horizontal. This leads to more negative points being classified as positive points above the boundary. At the other extreme of $\lambda = 1$, we see that nearly half of the negative points have been classified as positive, and the classifier learns very little compared to chance.
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_3-2_margins.pdf}
+		\caption{Margin sizes}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_3-2_11.pdf}
+		\caption{$\lambda = 2^{-10}$}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_3-2_6.pdf}
+		\caption{$\lambda = 2^{-5}$}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_3-2_1.pdf}
+		\caption{$\lambda = 1$}
+	\end{subfigure}
+	\caption{(a): Margin sizes with respect to regularization strengths $\lambda$. (b, c, d): Decision boundaries for the training set in artificial dataset 3, with varying regularization strengths.}
+\end{figure}
+
+\subsection{Kernelized Soft-SVM for Nonlinear Features} To begin generalizing the Soft-SVM to the case of nonlinear features, we can begin by considering the kernelized version of Soft-SVM, as follows:
+$$\min_w \frac{\lambda}{2} \|w\|^2 +  \sum_n [1-y_n(w^T\phi(x_n))]_+ \Rightarrow \max_a \frac{\lambda}{2}\|w\|^2 + \sum_n \left[ 1- \sum_m a_m y_ny_m K(x_n,x_m) \right]_+$$
+where the right-hand side is the dual form of the kernelized Soft-SVM with the kernel $K$ explicitly shown, and we have substituted the primal solution $w = \sum_n a_n y_n \phi(x_n)$. By using a modified, corresponding version of the kernelized Pegasos algorithm, we can solve the above maximization problem for the $a$ (Lagrange multiplier) variables and reconstruct the weight vector $w$. More directly, however, we can simply use the kernelized version of the discriminant function as the predictor. That is, for a new point $x$, we can use the fact that:
+$$w^T\phi(x) = \sum_n a_n y_n \phi(x_n)^T\phi(x) = \sum_n a_n y_n K(x_n,x)$$
+using our output values of $a$ from Pegasos to make the prediction. As we have shown, this formulation is exactly equivalent to the dual C-SVM, so the same sparsity properties apply. Though dependent on the choice of basis function (i.e. kernel), it is expected that the kernelized Soft-SVM will yield relatively sparse solutions in terms of $a$, since the nonzero weights are only placed on support vectors.
+
+\subsection{Hyperparameter Dependence of Kernelized Soft-SVM} To demonstrate this behavior, we again return to Gaussian radial basis functions (RBFs) by employing a Gaussian kernel in the kernelized Soft-SVM. We focus on the dependence of the sparsity and decision boundary properties on the choice of kernel, i.e. varying the bandwidth values of the Gaussian kernel, so we fix $\lambda = 0.02$ for all experiments, and instead let $\gamma$ vary from $2^2$ to $2^{-2}$.
+
+\begin{figure}[b]
+	\centering
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_3-4_sv.pdf}
+		\caption{Number of support vectors}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_3-4_0.pdf}
+		\caption{$\lambda = 2^{-10}$}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_3-4_2.pdf}
+		\caption{$\lambda = 2^{-5}$}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_3-4_4.pdf}
+		\caption{$\lambda = 1$}
+	\end{subfigure}
+	\caption{(a): Number of support vectors as $\gamma$ varies. (b, c, d): Decision boundaries for the training set in artificial dataset 3, with varying kernel bandwidths.}
+\end{figure}
+
+As shown in {\bf Figure 8(a)}, the number of support vectors increases monotonically with the kernel bandwidth $\gamma$. This is to be expected, as $\gamma \propto 1/\sigma^2$ for the Gaussian kernel, so as $\gamma$ increases, $\sigma^2$ decreases, and each point $x_n$ in the dataset has less influence on the prediction. Because each point is less influential, we require more points in order to make an effective prediction, which yields the increase in the number of support vectors utilized by the classifier.
+
+{\bf Figures 8(b)-(d)} illustrate ... 
+
 \section{Handwritten Digit Recognition with MNIST}
-
-
-
-
-
-
-
-
-
-
-
-
-
-In this section, we investigate the performance of gradient descent-based algorithms for minimizing scalar functions of vector arguments. In particular, we consider the following functions: 1) the negative Gaussian function:
-$$f(x) = -\frac{1}{\sqrt{(2\pi)^n |\Sigma|}} \exp\left[ -\frac{1}{2}(x-u)^T\Sigma^{-1}(x-u) \right]$$
-and 2) the quadratic bowl function $f(x) = \frac{1}{2}x^TAx - x^Tb$.
-\subsection{Initialization and Hyperparameters} We first explore the batch gradient descent algorithm. For loss function $f(x)$, the gradient descent algorithm performs $x = x - \eta \nabla f(x)$
-where $\eta$ is the step size. These iterations continue until a convergence threshold is met, i.e. $|f(x) - f(\tilde{x})| < \epsilon$, where $x, \tilde{x}$ are successive iterations. We investigate the dependence of this algorithm on the initialization of the algorithm as well as its hyperparameters, namely the step size $\eta$ and the convergence threshold $\epsilon$. Throughout the experiments, we fix the following parameters of the functions $u = (10, 10),\Sigma = \begin{pmatrix} 1000 & 0 \\ 0 & 1000\end{pmatrix}$ and $A = \begin{pmatrix} 10 & 5 \\ 5 & 10\end{pmatrix},b = (400, 400)$.
-
-First, we note that the large variance in the negative Gaussian density yields small objective function values (scaled by the reciprocal of the determinant of $\Sigma$), as well as small gradients. Thus, we consider only large step sizes that will yield noticeable increments in the values of $x$; otherwise, no learning is achieved. Similarly, we only consider very small $\epsilon$ for the same reasons.
-
-The results are shown in {\bf Figure 1} for the negative Gaussian function, where the $z$-axis is the squared distance. We have used step sizes of $10^5, 10^6, \dots, 10^10$ and convergence criteria of $10^{-10}, 10^{-11}, \dots, 10^{-20}$. The plots reveal two major points. First, for any choice of initialization and step size used in the experiments, gradient descent does not converge to a suitable solution until $\epsilon$, the convergence threshold, is sufficient small. As the plots demonstrate, we require $\epsilon \approx 10^{-15}$ or $\log(\epsilon) \approx -35$ before the squared error falls to negligible values. Second, the step size must bee sufficiently large before convergence is achieved, in the same vein as the convergence threshold. Even for suitable $\epsilon$ values, a relatively small step size (i.e. $10^5$) does not yield approximate convergence to the correct solution. Indeed, for most cases, we require a step size of $\eta \approx 10^7$ before the suared loss becomes negligible. As discussed above, these issues are germane to the negative Gaussian function, due to the large determinant value effectively annihilating the step sizes unless sufficiently large.
-
-On the other hand, the quadratic bowl function does not have such issues, and using large step sizes generally yields divergence. Indeed, even using $\eta = 1$ leads to diverging estimates for $\epsilon \approx 10^{-15}$. Thus, for this case we consider step sizes of $10^{-1}, 10^{-2}, \dots, 10^{-5}$ and similarly convergence criteria of $10^{-10}, 10^{-11}, \dots, 10^{-20}$. Results as shown in {\bf Figure 2} demonstrate a very similar behavior for the quadratic bowl function; the convergence threshold $\epsilon$ must be suitably small for convergence to the correct values. In this case, however, if the step size $\eta$ is too small, then no $\epsilon$ used in our experiments can yield convergence, unlike the case of the negative Gaussian, in which a suitably small $\epsilon$ would yield convergence in all step sizes. We must have a large enough step size (in this case $\eta \approx 0.01$) for convergence in this example.
 
 
 \end{document}

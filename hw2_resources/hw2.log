@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.27)  12 OCT 2016 12:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.27)  18 OCT 2016 00:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -290,15 +290,15 @@ e
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(21.68121pt, 570.93257pt, 21.68121pt)
-* v-part:(T,H,B)=(21.68121pt, 751.60756pt, 21.68121pt)
+* h-part:(L,W,R)=(36.135pt, 542.02501pt, 36.135pt)
+* v-part:(T,H,B)=(36.135pt, 722.7pt, 36.135pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=570.93257pt
-* \textheight=751.60756pt
-* \oddsidemargin=-50.58878pt
-* \evensidemargin=-50.58878pt
-* \topmargin=-72.58878pt
+* \textwidth=542.02501pt
+* \textheight=722.7pt
+* \oddsidemargin=-36.135pt
+* \evensidemargin=-36.135pt
+* \topmargin=-58.135pt
 * \headheight=8.0pt
 * \headsep=14.0pt
 * \topskip=10.0pt
@@ -320,58 +320,55 @@ e
 File: hw2_1-1_1.pdf Graphic file (type pdf)
  <use hw2_1-1_1.pdf>
 Package pdftex.def Info: hw2_1-1_1.pdf used on input line 79.
-(pdftex.def)             Requested size: 131.31204pt x 98.47998pt.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
 
 <hw2_1-2_1.pdf, id=2, 578.16pt x 433.62pt>
 File: hw2_1-2_1.pdf Graphic file (type pdf)
  <use hw2_1-2_1.pdf>
 Package pdftex.def Info: hw2_1-2_1.pdf used on input line 83.
-(pdftex.def)             Requested size: 131.31204pt x 98.47998pt.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
 
 <hw2_1-2_2.pdf, id=3, 578.16pt x 433.62pt>
 File: hw2_1-2_2.pdf Graphic file (type pdf)
  <use hw2_1-2_2.pdf>
 Package pdftex.def Info: hw2_1-2_2.pdf used on input line 87.
-(pdftex.def)             Requested size: 131.31204pt x 98.47998pt.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
 
 <hw2_1-2_3.pdf, id=4, 578.16pt x 433.62pt>
 File: hw2_1-2_3.pdf Graphic file (type pdf)
  <use hw2_1-2_3.pdf>
 Package pdftex.def Info: hw2_1-2_3.pdf used on input line 91.
-(pdftex.def)             Requested size: 131.31204pt x 98.47998pt.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
 
 <hw2_1-2_4.pdf, id=5, 578.16pt x 433.62pt>
 File: hw2_1-2_4.pdf Graphic file (type pdf)
  <use hw2_1-2_4.pdf>
 Package pdftex.def Info: hw2_1-2_4.pdf used on input line 100.
-(pdftex.def)             Requested size: 131.31204pt x 98.47998pt.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
 
 <hw2_1-2_6.pdf, id=6, 578.16pt x 433.62pt>
 File: hw2_1-2_6.pdf Graphic file (type pdf)
  <use hw2_1-2_6.pdf>
 Package pdftex.def Info: hw2_1-2_6.pdf used on input line 104.
-(pdftex.def)             Requested size: 131.31204pt x 98.47998pt.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
 
 <hw2_1-2_8.pdf, id=7, 578.16pt x 433.62pt>
 File: hw2_1-2_8.pdf Graphic file (type pdf)
  <use hw2_1-2_8.pdf>
 Package pdftex.def Info: hw2_1-2_8.pdf used on input line 108.
-(pdftex.def)             Requested size: 131.31204pt x 98.47998pt.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
 
 <hw2_1-2_10.pdf, id=8, 578.16pt x 433.62pt>
 File: hw2_1-2_10.pdf Graphic file (type pdf)
  <use hw2_1-2_10.pdf>
 Package pdftex.def Info: hw2_1-2_10.pdf used on input line 112.
-(pdftex.def)             Requested size: 131.31204pt x 98.47998pt.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
 
 <hw2_1-3_1.pdf, id=9, 578.16pt x 433.62pt>
 File: hw2_1-3_1.pdf Graphic file (type pdf)
  <use hw2_1-3_1.pdf>
 Package pdftex.def Info: hw2_1-3_1.pdf used on input line 132.
-(pdftex.def)             Requested size: 199.82988pt x 149.87033pt.
-
-Underfull \vbox (badness 2689) has occurred while \output is active []
-
+(pdftex.def)             Requested size: 189.71205pt x 142.2812pt.
  [1{/usr/local/texlive/2016basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map} 
 <./hw2_1-1_1.pdf> <./hw2_1-2_1.pdf
 
@@ -385,7 +382,22 @@ tiple pdfs with page group included in a single page
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_1-2_3.pdf): PDF inclusion: mul
 tiple pdfs with page group included in a single page
->] [2 <./hw2_1-2_4.pdf> <./hw2_1-2_6.pdf
+>] <hw2-2_1-1.png, id=127, 578.16pt x 433.62pt>
+File: hw2-2_1-1.png Graphic file (type png)
+ <use hw2-2_1-1.png>
+Package pdftex.def Info: hw2-2_1-1.png used on input line 165.
+(pdftex.def)             Requested size: 162.60915pt x 121.95532pt.
+
+<hw2_2-2_acc.pdf, id=129, 578.16pt x 433.62pt>
+File: hw2_2-2_acc.pdf Graphic file (type pdf)
+ <use hw2_2-2_acc.pdf>
+Package pdftex.def Info: hw2_2-2_acc.pdf used on input line 169.
+(pdftex.def)             Requested size: 162.60915pt x 121.95532pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2 <./hw2_1-2_4.pdf> <./hw2_1-2_6.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_1-2_6.pdf): PDF inclusion: mul
 tiple pdfs with page group included in a single page
@@ -401,36 +413,207 @@ ltiple pdfs with page group included in a single page
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_1-3_1.pdf): PDF inclusion: mul
 tiple pdfs with page group included in a single page
->] [3] (./hw2.aux) ) 
+>] <hw2_2-2_1_train.pdf, id=237, 578.16pt x 433.62pt>
+File: hw2_2-2_1_train.pdf Graphic file (type pdf)
+
+<use hw2_2-2_1_train.pdf>
+Package pdftex.def Info: hw2_2-2_1_train.pdf used on input line 182.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
+ <hw2_2-2_2_train.pdf, id=238, 578.16pt x 433.62pt>
+File: hw2_2-2_2_train.pdf Graphic file (type pdf)
+
+<use hw2_2-2_2_train.pdf>
+Package pdftex.def Info: hw2_2-2_2_train.pdf used on input line 186.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
+ <hw2_2-2_3_train.pdf, id=239, 578.16pt x 433.62pt>
+File: hw2_2-2_3_train.pdf Graphic file (type pdf)
+
+<use hw2_2-2_3_train.pdf>
+Package pdftex.def Info: hw2_2-2_3_train.pdf used on input line 190.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
+ <hw2_2-2_4_train.pdf, id=240, 578.16pt x 433.62pt>
+File: hw2_2-2_4_train.pdf Graphic file (type pdf)
+
+<use hw2_2-2_4_train.pdf>
+Package pdftex.def Info: hw2_2-2_4_train.pdf used on input line 194.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
+
+<hw2-2_3_linmargins.pdf, id=241, 578.16pt x 433.62pt>
+File: hw2-2_3_linmargins.pdf Graphic file (type pdf)
+
+<use hw2-2_3_linmargins.pdf>
+Package pdftex.def Info: hw2-2_3_linmargins.pdf used on input line 205.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
+ <hw2-2_3_linsv.pdf, id=242, 578.16pt x 433.62pt>
+File: hw2-2_3_linsv.pdf Graphic file (type pdf)
+
+<use hw2-2_3_linsv.pdf>
+Package pdftex.def Info: hw2-2_3_linsv.pdf used on input line 209.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
+
+Underfull \hbox (badness 1057) in paragraph at lines 210--210
+[]\OT1/cmr/m/sc/9 (b) |\OT1/cmr/m/n/9 Sup-port Vec-tors, Lin-ear
+ []
+
+
+LaTeX Warning: File `hw2-2_3_gausmargins.pdf' not found on input line 213.
+
+
+! Package pdftex.def Error: File `hw2-2_3_gausmargins.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.213 ...idth=\textwidth]{hw2-2_3_gausmargins.pdf}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 2165) in paragraph at lines 214--214
+[]\OT1/cmr/m/sc/9 (c) |\OT1/cmr/m/n/9 Mar-gin Sizes, Gauss-ian
+ []
+
+<hw2-2_3_gaussv.pdf, id=243, 578.16pt x 433.62pt>
+File: hw2-2_3_gaussv.pdf Graphic file (type pdf)
+ <use hw2-2_3_gaussv.pdf>
+Package pdftex.def Info: hw2-2_3_gaussv.pdf used on input line 217.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
+
+[3 <./hw2-2_1-1.png> <./hw2_2-2_acc.pdf> <./hw2_2-2_1_train.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_2-2_1_train.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+> <./hw2_2-2_2_train.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_2-2_2_train.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+> <./hw2_2-2_3_train.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_2-2_3_train.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+> <./hw2_2-2_4_train.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_2-2_4_train.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+> <./hw2-2_3_linmargins.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./hw2-2_3_linmargins.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+> <./hw2-2_3_linsv.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./hw2-2_3_linsv.pdf): PDF inclusion:
+ multiple pdfs with page group included in a single page
+> <./hw2-2_3_gaussv.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./hw2-2_3_gaussv.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+>] <hw2_3-2_margins.pdf, id=474, 578.16pt x 433.62pt>
+File: hw2_3-2_margins.pdf Graphic file (type pdf)
+
+<use hw2_3-2_margins.pdf>
+Package pdftex.def Info: hw2_3-2_margins.pdf used on input line 241.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
+ <hw2_3-2_11.pdf, id=475, 578.16pt x 433.62pt>
+File: hw2_3-2_11.pdf Graphic file (type pdf)
+
+<use hw2_3-2_11.pdf>
+Package pdftex.def Info: hw2_3-2_11.pdf used on input line 245.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
+ <hw2_3-2_6.pdf, id=476, 578.16pt x 433.62pt>
+File: hw2_3-2_6.pdf Graphic file (type pdf)
+
+<use hw2_3-2_6.pdf>
+Package pdftex.def Info: hw2_3-2_6.pdf used on input line 249.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
+ <hw2_3-2_1.pdf, id=477, 578.16pt x 433.62pt>
+File: hw2_3-2_1.pdf Graphic file (type pdf)
+
+<use hw2_3-2_1.pdf>
+Package pdftex.def Info: hw2_3-2_1.pdf used on input line 253.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
+ [4 <./hw2_3-2_margins.pdf> <./hw2_3-2_11.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_3-2_11.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+> <./hw2_3-2_6.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_3-2_6.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./hw2_3-2_1.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_3-2_1.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>] <hw2_3-4_sv.pdf, id=565, 578.16pt x 433.62pt>
+File: hw2_3-4_sv.pdf Graphic file (type pdf)
+ <use hw2_3-4_sv.pdf>
+Package pdftex.def Info: hw2_3-4_sv.pdf used on input line 270.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
+
+<hw2_3-4_0.pdf, id=566, 578.16pt x 433.62pt>
+File: hw2_3-4_0.pdf Graphic file (type pdf)
+ <use hw2_3-4_0.pdf>
+Package pdftex.def Info: hw2_3-4_0.pdf used on input line 274.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
+
+<hw2_3-4_2.pdf, id=567, 578.16pt x 433.62pt>
+File: hw2_3-4_2.pdf Graphic file (type pdf)
+ <use hw2_3-4_2.pdf>
+Package pdftex.def Info: hw2_3-4_2.pdf used on input line 278.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
+
+<hw2_3-4_4.pdf, id=568, 578.16pt x 433.62pt>
+File: hw2_3-4_4.pdf Graphic file (type pdf)
+ <use hw2_3-4_4.pdf>
+Package pdftex.def Info: hw2_3-4_4.pdf used on input line 282.
+(pdftex.def)             Requested size: 124.66342pt x 93.49776pt.
+ [5 <./hw2_3-4_sv.pdf> <./hw2_3-4_0.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_3-4_0.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./hw2_3-4_2.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_3-4_2.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./hw2_3-4_4.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_3-4_4.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>] (./hw2.aux) ) 
 Here is how much of TeX's memory you used:
- 4564 strings out of 494447
- 65395 string characters out of 6166766
- 132621 words of memory out of 5000000
- 7680 multiletter control sequences out of 15000+600000
- 10894 words of font info for 43 fonts, out of 8000000 for 9000
+ 4653 strings out of 494447
+ 67127 string characters out of 6166766
+ 132599 words of memory out of 5000000
+ 7749 multiletter control sequences out of 15000+600000
+ 11062 words of font info for 44 fonts, out of 8000000 for 9000
  480 hyphenation exceptions out of 8191
- 42i,10n,40p,1277b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016basic/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016basic/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2016basic/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016basic/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016basic/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2016basic/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2016basic/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2016basic/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016basic/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2016basi
-c/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016ba
-sic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016
-basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/20
-16basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/tex
-live/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/
-texlive/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on hw2.pdf (3 pages, 254955 bytes).
+ 42i,10n,40p,1321b,501s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016basic/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx10.pfb></usr/local/texlive/2016basic/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2016basic/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016basic/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016basic/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2016basic/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2016basic/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2016basic/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016basic/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2016basic/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016basic/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016basi
+c/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016ba
+sic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2016
+basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texli
+ve/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/te
+xlive/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local
+/texlive/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/lo
+cal/texlive/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on hw2.pdf (5 pages, 499199 bytes).
 PDF statistics:
- 288 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
+ 699 PDF objects out of 1000 (max. 8388607)
+ 200 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 
