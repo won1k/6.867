@@ -128,6 +128,7 @@ for train_size in train_sizes:
 		start_time = time.time()
 		QPlin = trainSVM(X_train, y_train, C)
 		time_lin_QP.append(time.time() - start_time)
+		print(time_lin_QP)
 
 		# Train Gaussian SVM (QP)
 		def kernel(x1, x2):
@@ -185,10 +186,10 @@ for train_size in train_sizes:
 
 # Plots
 plt.figure()
-plt.plot(train_size, [time_lin_QP[i] for i in range(0, len(20), 5)], label = "Linear, QP")
-plt.plot(train_size, [time_lin_peg[i] for i in range(0, len(20), 5)], label = "Linear, Pegasos")
-plt.plot(train_size, [time_gaus_QP[i] for i in range(0, len(20), 5)], label = "Gaus, QP")
-plt.plot(train_size, [time_gaus_peg[i] for i in range(0, len(20), 5)], label = "Gaus, Pegasos")
+plt.plot(train_sizes, [time_lin_QP[i] for i in range(0, 20, 5)], label = "Linear, QP")
+plt.plot(train_sizes, [time_lin_peg[i] for i in range(0, 20, 5)], label = "Linear, Pegasos")
+plt.plot(train_sizes, [time_gaus_QP[i] for i in range(0, 20, 5)], label = "Gaus, QP")
+plt.plot(train_sizes, [time_gaus_peg[i] for i in range(0, 20, 5)], label = "Gaus, Pegasos")
 plt.xlabel("Trainset Size")
 plt.ylabel("Running Time (s)")
 plt.savefig("hw2_4-3_time.pdf")

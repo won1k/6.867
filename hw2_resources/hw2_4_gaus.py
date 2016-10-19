@@ -10,7 +10,7 @@ from sklearn.linear_model import LogisticRegression
 train_size = 200
 valid_size = 150
 test_size = 150
-norm = True
+norm = False
 
 def gausRBF(x1, x2, gamma = 1):
 	# assume x are vectors of size p
@@ -181,16 +181,16 @@ plt.xticks(x_values)
 plt.bar(w_points, [test_acc_LR1, test_acc_LR2, test_acc_SVM, test_acc_gaus], width = 0.5)
 plt.xlabel('Classifier')
 plt.ylabel('Accuracy')
-plt.ylim([0.8, 1.02])
-plt.savefig('hw2_4-2_test_norm.pdf')
+plt.ylim([0.85, 1])
+plt.savefig('hw2_4-2_test.pdf')
 
 fig = plt.figure()
 plt.xticks(x_values)
 plt.bar(w_points, [valid_acc_LR1, valid_acc_LR2, valid_acc_SVM, valid_acc_gaus], width = 0.5)
 plt.xlabel('Classifier')
 plt.ylabel('Accuracy')
-plt.ylim([0.8, 1.02])
-plt.savefig('hw2_4-2_valid_norm.pdf')
+plt.ylim([0.85, 1])
+plt.savefig('hw2_4-2_valid.pdf')
 
 print(valid_best_gaus_gam)
 

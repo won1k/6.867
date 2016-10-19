@@ -1,51 +1,51 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  18 OCT 2016 20:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.27)  19 OCT 2016 08:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **hw2.tex
 (./hw2.tex
-LaTeX2e <2014/05/01>
-Babel <3.9k> and hyphenation patterns for 78 languages loaded.
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amscls/amsart.cls
-Document Class: amsart 2009/07/02 v2.20.1
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 22 language(s) loaded.
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/amscls/amsart.cls
+Document Class: amsart 2015/03/04 v2.20.2
 \linespacing=\dimen102
 \normalparindent=\dimen103
 \normaltopskip=\skip41
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2013/01/14 v2.14 AMS math features
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/10 v2.15b AMS math features
 \@mathmargin=\skip42
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks14
 \ex@=\dimen104
 ))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen105
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 1999/12/14 v2.01 operator names
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count79
-LaTeX Info: Redefining \frac on input line 210.
+LaTeX Info: Redefining \frac on input line 199.
 \uproot@=\count80
 \leftroot@=\count81
-LaTeX Info: Redefining \overline on input line 306.
+LaTeX Info: Redefining \overline on input line 297.
 \classnum@=\count82
 \DOTSCASE@=\count83
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen106
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \macc@depth=\count84
 \c@MaxMatrixCols=\count85
 \dotsspace@=\muskip10
@@ -66,15 +66,15 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \multlinegap=\skip43
 \multlinetaggap=\skip44
 \mathdisplay@stack=\toks18
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
 )
 LaTeX Font Info:    Try loading font information for U+msa on input line 388.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 
 
@@ -85,7 +85,7 @@ Package amsfonts Warning: The 'psamsfonts' option is obsolete in AMSFonts v3.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-\copyins=\insert233
+\copyins=\insert199
 \abstractbox=\box28
 \listisep=\skip45
 \c@part=\count91
@@ -108,25 +108,25 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 \thm@postskip=\skip49
 \thm@headsep=\skip50
 \dth@everypar=\toks24
-) (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (/usr/local/texlive/2016basic/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/enumerate.sty
-Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks25
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 57.
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks26
 )
 \captionmargin=\dimen114
@@ -143,46 +143,45 @@ Package caption Info: AMS or SMF document class.
 \c@subfigure=\count100
 \c@subtable=\count101
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 96.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count102
 ))
 \Gin@req@height=\dimen121
 \Gin@req@width=\dimen122
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
 )
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifvtex.sty
-Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(/usr/local/texlive/2014/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+(/usr/local/texlive/2016basic/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count103
@@ -198,566 +197,27 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen130
 \Gm@dimlist=\toks27
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen131
-\WF@size=\dimen132
-\c@WF@wrappedlines=\count106
-\WF@box=\box29
-\WF@everypar=\toks28
-Package: wrapfig 2003/01/31  v 3.6
-)
-\c@thm=\count107
 
-\bibstyle{plain}
-(./hw2.aux)
-\openout1 = `hw2.aux'.
+! LaTeX Error: File `wrapfig.sty' not found.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Try loading font information for U+msa on input line 55.
- (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 55.
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: wrapfig package is loaded.
-Package caption Info: End \AtBeginDocument code.
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.13 ^^M
+        
+*** (cannot \read from terminal in nonstop modes)
 
-(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count108
-\scratchdimen=\dimen133
-\scratchbox=\box30
-\nofMPsegments=\count109
-\nofMParguments=\count110
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count111
-\MPscratchDim=\dimen134
-\MPnumerator=\count112
-\makeMPintoPDFobject=\count113
-\everyMPtoPDFconversion=\toks30
-) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-*geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: <default>
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
-* h-part:(L,W,R)=(14.45377pt, 585.38747pt, 14.45377pt)
-* v-part:(T,H,B)=(14.45377pt, 766.06245pt, 14.45377pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=585.38747pt
-* \textheight=766.06245pt
-* \oddsidemargin=-57.81622pt
-* \evensidemargin=-57.81622pt
-* \topmargin=-79.81622pt
-* \headheight=8.0pt
-* \headsep=14.0pt
-* \topskip=10.0pt
-* \footskip=12.0pt
-* \marginparwidth=90.0pt
-* \marginparsep=11.0pt
-* \columnsep=10.0pt
-* \skip\footins=7.0pt plus 11.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-<hw2_1-1_1.pdf, id=1, 578.16pt x 433.62pt>
-File: hw2_1-1_1.pdf Graphic file (type pdf)
- <use hw2_1-1_1.pdf>
-Package pdftex.def Info: hw2_1-1_1.pdf used on input line 80.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_1-2_1.pdf, id=2, 578.16pt x 433.62pt>
-File: hw2_1-2_1.pdf Graphic file (type pdf)
- <use hw2_1-2_1.pdf>
-Package pdftex.def Info: hw2_1-2_1.pdf used on input line 84.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_1-2_2.pdf, id=3, 578.16pt x 433.62pt>
-File: hw2_1-2_2.pdf Graphic file (type pdf)
- <use hw2_1-2_2.pdf>
-Package pdftex.def Info: hw2_1-2_2.pdf used on input line 88.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_1-2_3.pdf, id=4, 578.16pt x 433.62pt>
-File: hw2_1-2_3.pdf Graphic file (type pdf)
- <use hw2_1-2_3.pdf>
-Package pdftex.def Info: hw2_1-2_3.pdf used on input line 92.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_1-2_4.pdf, id=5, 578.16pt x 433.62pt>
-File: hw2_1-2_4.pdf Graphic file (type pdf)
- <use hw2_1-2_4.pdf>
-Package pdftex.def Info: hw2_1-2_4.pdf used on input line 101.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_1-2_6.pdf, id=6, 578.16pt x 433.62pt>
-File: hw2_1-2_6.pdf Graphic file (type pdf)
- <use hw2_1-2_6.pdf>
-Package pdftex.def Info: hw2_1-2_6.pdf used on input line 105.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_1-2_8.pdf, id=7, 578.16pt x 433.62pt>
-File: hw2_1-2_8.pdf Graphic file (type pdf)
- <use hw2_1-2_8.pdf>
-Package pdftex.def Info: hw2_1-2_8.pdf used on input line 109.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_1-2_10.pdf, id=8, 578.16pt x 433.62pt>
-File: hw2_1-2_10.pdf Graphic file (type pdf)
- <use hw2_1-2_10.pdf>
-Package pdftex.def Info: hw2_1-2_10.pdf used on input line 113.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_1-3_1.pdf, id=9, 578.16pt x 433.62pt>
-File: hw2_1-3_1.pdf Graphic file (type pdf)
- <use hw2_1-3_1.pdf>
-Package pdftex.def Info: hw2_1-3_1.pdf used on input line 133.
-(pdftex.def)             Requested size: 117.0757pt x 87.80095pt.
- [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./hw
-2_1-1_1.pdf> <./hw2_1-2_1.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_1-2_1.pdf): PDF inclusion: mul
-tiple pdfs with page group included in a single page
-> <./hw2_1-2_2.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_1-2_2.pdf): PDF inclusion: mul
-tiple pdfs with page group included in a single page
-> <./hw2_1-2_3.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_1-2_3.pdf): PDF inclusion: mul
-tiple pdfs with page group included in a single page
->] <hw2-2_1-1.png, id=127, 578.16pt x 433.62pt>
-File: hw2-2_1-1.png Graphic file (type png)
- <use hw2-2_1-1.png>
-Package pdftex.def Info: hw2-2_1-1.png used on input line 166.
-(pdftex.def)             Requested size: 117.0757pt x 87.80095pt.
-
-<hw2_2-2_acc.pdf, id=129, 578.16pt x 433.62pt>
-File: hw2_2-2_acc.pdf Graphic file (type pdf)
- <use hw2_2-2_acc.pdf>
-Package pdftex.def Info: hw2_2-2_acc.pdf used on input line 170.
-(pdftex.def)             Requested size: 117.0757pt x 87.80095pt.
-
-<hw2_2-2_1_train.pdf, id=130, 578.16pt x 433.62pt>
-File: hw2_2-2_1_train.pdf Graphic file (type pdf)
- <use hw2_2-2_1_train.pdf>
-Package pdftex.def Info: hw2_2-2_1_train.pdf used on input line 183.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_2-2_2_train.pdf, id=131, 578.16pt x 433.62pt>
-File: hw2_2-2_2_train.pdf Graphic file (type pdf)
- <use hw2_2-2_2_train.pdf>
-Package pdftex.def Info: hw2_2-2_2_train.pdf used on input line 187.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_2-2_3_train.pdf, id=132, 578.16pt x 433.62pt>
-File: hw2_2-2_3_train.pdf Graphic file (type pdf)
- <use hw2_2-2_3_train.pdf>
-Package pdftex.def Info: hw2_2-2_3_train.pdf used on input line 191.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_2-2_4_train.pdf, id=133, 578.16pt x 433.62pt>
-File: hw2_2-2_4_train.pdf Graphic file (type pdf)
- <use hw2_2-2_4_train.pdf>
-Package pdftex.def Info: hw2_2-2_4_train.pdf used on input line 195.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-[2 <./hw2_1-2_4.pdf> <./hw2_1-2_6.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_1-2_6.pdf): PDF inclusion: mul
-tiple pdfs with page group included in a single page
-> <./hw2_1-2_8.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_1-2_8.pdf): PDF inclusion: mul
-tiple pdfs with page group included in a single page
-> <./hw2_1-2_10.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_1-2_10.pdf): PDF inclusion: mu
-ltiple pdfs with page group included in a single page
-> <./hw2_1-3_1.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_1-3_1.pdf): PDF inclusion: mul
-tiple pdfs with page group included in a single page
-> <./hw2-2_1-1.png> <./hw2_2-2_acc.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_2-2_acc.pdf): PDF inclusion: m
-ultiple pdfs with page group included in a single page
->] <hw2-2_3_linmargins.pdf, id=265, 578.16pt x 433.62pt>
-File: hw2-2_3_linmargins.pdf Graphic file (type pdf)
-
-<use hw2-2_3_linmargins.pdf>
-Package pdftex.def Info: hw2-2_3_linmargins.pdf used on input line 210.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
- <hw2-2_3_linsv.pdf, id=266, 578.16pt x 433.62pt>
-File: hw2-2_3_linsv.pdf Graphic file (type pdf)
-
-<use hw2-2_3_linsv.pdf>
-Package pdftex.def Info: hw2-2_3_linsv.pdf used on input line 214.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
- <hw2-2_3_gausmargins.pdf, id=267, 578.16pt x 433.62pt>
-File: hw2-2_3_gausmargins.pdf Graphic file (type pdf)
-
-<use hw2-2_3_gausmargins.pdf>
-Package pdftex.def Info: hw2-2_3_gausmargins.pdf used on input line 218.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2-2_3_gaussv.pdf, id=268, 578.16pt x 433.62pt>
-File: hw2-2_3_gaussv.pdf Graphic file (type pdf)
- <use hw2-2_3_gaussv.pdf>
-Package pdftex.def Info: hw2-2_3_gaussv.pdf used on input line 222.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-[3 <./hw2_2-2_1_train.pdf> <./hw2_2-2_2_train.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_2-2_2_train.pdf): PDF inclusio
-n: multiple pdfs with page group included in a single page
-> <./hw2_2-2_3_train.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_2-2_3_train.pdf): PDF inclusio
-n: multiple pdfs with page group included in a single page
-> <./hw2_2-2_4_train.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_2-2_4_train.pdf): PDF inclusio
-n: multiple pdfs with page group included in a single page
-> <./hw2-2_3_linmargins.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2-2_3_linmargins.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
-> <./hw2-2_3_linsv.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2-2_3_linsv.pdf): PDF inclusion:
- multiple pdfs with page group included in a single page
-> <./hw2-2_3_gausmargins.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2-2_3_gausmargins.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
-> <./hw2-2_3_gaussv.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2-2_3_gaussv.pdf): PDF inclusion
-: multiple pdfs with page group included in a single page
->] <hw2_3-2_margins.pdf, id=508, 578.16pt x 433.62pt>
-File: hw2_3-2_margins.pdf Graphic file (type pdf)
-
-<use hw2_3-2_margins.pdf>
-Package pdftex.def Info: hw2_3-2_margins.pdf used on input line 246.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
- <hw2_3-2_11.pdf, id=509, 578.16pt x 433.62pt>
-File: hw2_3-2_11.pdf Graphic file (type pdf)
-
-<use hw2_3-2_11.pdf>
-Package pdftex.def Info: hw2_3-2_11.pdf used on input line 250.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
- <hw2_3-2_6.pdf, id=510, 578.16pt x 433.62pt>
-File: hw2_3-2_6.pdf Graphic file (type pdf)
-
-<use hw2_3-2_6.pdf>
-Package pdftex.def Info: hw2_3-2_6.pdf used on input line 254.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
- <hw2_3-2_1.pdf, id=511, 578.16pt x 433.62pt>
-File: hw2_3-2_1.pdf Graphic file (type pdf)
-
-<use hw2_3-2_1.pdf>
-Package pdftex.def Info: hw2_3-2_1.pdf used on input line 258.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
- <hw2_3-4_sv.pdf, id=512, 578.16pt x 433.62pt>
-File: hw2_3-4_sv.pdf Graphic file (type pdf)
-
-<use hw2_3-4_sv.pdf>
-Package pdftex.def Info: hw2_3-4_sv.pdf used on input line 272.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 278--279
-
- []
-
-[4 <./hw2_3-2_margins.pdf> <./hw2_3-2_11.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_3-2_11.pdf): PDF inclusion: mu
-ltiple pdfs with page group included in a single page
-> <./hw2_3-2_6.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_3-2_6.pdf): PDF inclusion: mul
-tiple pdfs with page group included in a single page
-> <./hw2_3-2_1.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_3-2_1.pdf): PDF inclusion: mul
-tiple pdfs with page group included in a single page
->] <hw2_4-1_1v7.pdf, id=600, 578.16pt x 433.62pt>
-File: hw2_4-1_1v7.pdf Graphic file (type pdf)
- <use hw2_4-1_1v7.pdf>
-Package pdftex.def Info: hw2_4-1_1v7.pdf used on input line 301.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_4-1_3v5.pdf, id=601, 578.16pt x 433.62pt>
-File: hw2_4-1_3v5.pdf Graphic file (type pdf)
- <use hw2_4-1_3v5.pdf>
-Package pdftex.def Info: hw2_4-1_3v5.pdf used on input line 305.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_4-1_4v9.pdf, id=602, 578.16pt x 433.62pt>
-File: hw2_4-1_4v9.pdf Graphic file (type pdf)
- <use hw2_4-1_4v9.pdf>
-Package pdftex.def Info: hw2_4-1_4v9.pdf used on input line 309.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_4-1_evo.pdf, id=603, 578.16pt x 433.62pt>
-File: hw2_4-1_evo.pdf Graphic file (type pdf)
- <use hw2_4-1_evo.pdf>
-Package pdftex.def Info: hw2_4-1_evo.pdf used on input line 313.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_4-1_1v7_norm.pdf, id=604, 578.16pt x 433.62pt>
-File: hw2_4-1_1v7_norm.pdf Graphic file (type pdf)
- <use hw2_4-1_1v7_norm.pdf>
-Package pdftex.def Info: hw2_4-1_1v7_norm.pdf used on input line 322.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_4-1_3v5_norm.pdf, id=605, 578.16pt x 433.62pt>
-File: hw2_4-1_3v5_norm.pdf Graphic file (type pdf)
- <use hw2_4-1_3v5_norm.pdf>
-Package pdftex.def Info: hw2_4-1_3v5_norm.pdf used on input line 326.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_4-1_4v9_norm.pdf, id=606, 578.16pt x 433.62pt>
-File: hw2_4-1_4v9_norm.pdf Graphic file (type pdf)
- <use hw2_4-1_4v9_norm.pdf>
-Package pdftex.def Info: hw2_4-1_4v9_norm.pdf used on input line 330.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_4-1_evo_norm.pdf, id=607, 578.16pt x 433.62pt>
-File: hw2_4-1_evo_norm.pdf Graphic file (type pdf)
- <use hw2_4-1_evo_norm.pdf>
-Package pdftex.def Info: hw2_4-1_evo_norm.pdf used on input line 334.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_4-1_1v7_ex.pdf, id=608, 578.16pt x 433.62pt>
-File: hw2_4-1_1v7_ex.pdf Graphic file (type pdf)
- <use hw2_4-1_1v7_ex.pdf>
-Package pdftex.def Info: hw2_4-1_1v7_ex.pdf used on input line 344.
-(pdftex.def)             Requested size: 87.809pt x 65.85402pt.
-
-<hw2_4-1_3v5_ex.pdf, id=609, 578.16pt x 433.62pt>
-File: hw2_4-1_3v5_ex.pdf Graphic file (type pdf)
- <use hw2_4-1_3v5_ex.pdf>
-Package pdftex.def Info: hw2_4-1_3v5_ex.pdf used on input line 349.
-(pdftex.def)             Requested size: 87.809pt x 65.85402pt.
-
-<hw2_4-1_4v9_ex.pdf, id=610, 578.16pt x 433.62pt>
-File: hw2_4-1_4v9_ex.pdf Graphic file (type pdf)
- <use hw2_4-1_4v9_ex.pdf>
-Package pdftex.def Info: hw2_4-1_4v9_ex.pdf used on input line 354.
-(pdftex.def)             Requested size: 87.809pt x 65.85402pt.
-
-<hw2_4-1_1v7_ex2.pdf, id=611, 578.16pt x 433.62pt>
-File: hw2_4-1_1v7_ex2.pdf Graphic file (type pdf)
- <use hw2_4-1_1v7_ex2.pdf>
-Package pdftex.def Info: hw2_4-1_1v7_ex2.pdf used on input line 359.
-(pdftex.def)             Requested size: 87.809pt x 65.85402pt.
-
-<hw2_4-1_3v5_ex5.pdf, id=612, 578.16pt x 433.62pt>
-File: hw2_4-1_3v5_ex5.pdf Graphic file (type pdf)
- <use hw2_4-1_3v5_ex5.pdf>
-Package pdftex.def Info: hw2_4-1_3v5_ex5.pdf used on input line 364.
-(pdftex.def)             Requested size: 87.809pt x 65.85402pt.
-
-<hw2_4-1_4v9_ex2.pdf, id=613, 578.16pt x 433.62pt>
-File: hw2_4-1_4v9_ex2.pdf Graphic file (type pdf)
- <use hw2_4-1_4v9_ex2.pdf>
-Package pdftex.def Info: hw2_4-1_4v9_ex2.pdf used on input line 369.
-(pdftex.def)             Requested size: 87.809pt x 65.85402pt.
-
-<hw2_4-2_valid.pdf, id=614, 578.16pt x 433.62pt>
-File: hw2_4-2_valid.pdf Graphic file (type pdf)
- <use hw2_4-2_valid.pdf>
-Package pdftex.def Info: hw2_4-2_valid.pdf used on input line 382.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_4-2_test.pdf, id=615, 578.16pt x 433.62pt>
-File: hw2_4-2_test.pdf Graphic file (type pdf)
- <use hw2_4-2_test.pdf>
-Package pdftex.def Info: hw2_4-2_test.pdf used on input line 386.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_4-2_valid_norm.pdf, id=616, 578.16pt x 433.62pt>
-File: hw2_4-2_valid_norm.pdf Graphic file (type pdf)
-
-<use hw2_4-2_valid_norm.pdf>
-Package pdftex.def Info: hw2_4-2_valid_norm.pdf used on input line 390.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
-
-<hw2_4-2_test_norm.pdf, id=617, 578.16pt x 433.62pt>
-File: hw2_4-2_test_norm.pdf Graphic file (type pdf)
-
-<use hw2_4-2_test_norm.pdf>
-Package pdftex.def Info: hw2_4-2_test_norm.pdf used on input line 394.
-(pdftex.def)             Requested size: 134.63661pt x 100.9744pt.
- [5 <./hw2_4-1_1v7.pdf> <./hw2_4-1_3v5.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_4-1_3v5.pdf): PDF inclusion: m
-ultiple pdfs with page group included in a single page
-> <./hw2_4-1_4v9.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_4-1_4v9.pdf): PDF inclusion: m
-ultiple pdfs with page group included in a single page
-> <./hw2_4-1_evo.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_4-1_evo.pdf): PDF inclusion: m
-ultiple pdfs with page group included in a single page
-> <./hw2_3-4_sv.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_3-4_sv.pdf): PDF inclusion: mu
-ltiple pdfs with page group included in a single page
->] [6 <./hw2_4-1_1v7_norm.pdf> <./hw2_4-1_3v5_norm.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_4-1_3v5_norm.pdf): PDF inclusi
-on: multiple pdfs with page group included in a single page
-> <./hw2_4-1_4v9_norm.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_4-1_4v9_norm.pdf): PDF inclusi
-on: multiple pdfs with page group included in a single page
-> <./hw2_4-1_evo_norm.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_4-1_evo_norm.pdf): PDF inclusi
-on: multiple pdfs with page group included in a single page
-> <./hw2_4-1_1v7_ex.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_4-1_1v7_ex.pdf): PDF inclusion
-: multiple pdfs with page group included in a single page
-> <./hw2_4-1_3v5_ex.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_4-1_3v5_ex.pdf): PDF inclusion
-: multiple pdfs with page group included in a single page
-> <./hw2_4-1_4v9_ex.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_4-1_4v9_ex.pdf): PDF inclusion
-: multiple pdfs with page group included in a single page
-> <./hw2_4-1_1v7_ex2.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_4-1_1v7_ex2.pdf): PDF inclusio
-n: multiple pdfs with page group included in a single page
-> <./hw2_4-1_3v5_ex5.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_4-1_3v5_ex5.pdf): PDF inclusio
-n: multiple pdfs with page group included in a single page
-> <./hw2_4-1_4v9_ex2.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_4-1_4v9_ex2.pdf): PDF inclusio
-n: multiple pdfs with page group included in a single page
-> <./hw2_4-2_valid.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_4-2_valid.pdf): PDF inclusion:
- multiple pdfs with page group included in a single page
-> <./hw2_4-2_test.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_4-2_test.pdf): PDF inclusion: 
-multiple pdfs with page group included in a single page
-> <./hw2_4-2_valid_norm.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_4-2_valid_norm.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
-> <./hw2_4-2_test_norm.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./hw2_4-2_test_norm.pdf): PDF inclus
-ion: multiple pdfs with page group included in a single page
->] (./hw2.aux) ) 
+ 
 Here is how much of TeX's memory you used:
- 4763 strings out of 493117
- 68849 string characters out of 6135433
- 137691 words of memory out of 5000000
- 7970 multiletter control sequences out of 15000+600000
- 10894 words of font info for 43 fonts, out of 8000000 for 9000
- 1302 hyphenation exceptions out of 8191
- 42i,10n,40p,1320b,497s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmcsc10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
-.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pf
-b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></us
-r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/loca
-l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on hw2.pdf (6 pages, 710381 bytes).
-PDF statistics:
- 1172 PDF objects out of 1200 (max. 8388607)
- 286 compressed objects within 3 object streams
- 0 named destinations out of 1000 (max. 500000)
- 211 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 3724 strings out of 494447
+ 52517 string characters out of 6166766
+ 112739 words of memory out of 5000000
+ 6913 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 480 hyphenation exceptions out of 8191
+ 42i,0n,40p,268b,43s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
