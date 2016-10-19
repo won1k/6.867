@@ -22,6 +22,7 @@ n = len(y)
 sv = []
 
 for t, gamma in enumerate(gammas):
+	print(gamma)
 	# Compute K
 	K = np.zeros((n,n))
 	for i in range(n):

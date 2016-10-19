@@ -8,7 +8,8 @@
 \usepackage{subcaption}
 \usepackage{graphicx}
 \usepackage{caption}
-\usepackage[margin=0.5in]{geometry}
+\usepackage[margin=0.2in]{geometry}
+\usepackage{wrapfig}
 
 %--------Theorem Environments--------
 %theoremstyle{plain} --- default
@@ -128,7 +129,7 @@ $$\frac{\partial E_{LR}}{\partial dw_j} = \frac{\partial NLL}{\partial dw_j} + \
 		\end{tabular}
 		\caption{Regularizer and $\lambda$ Values}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.35\textwidth}
+	\begin{subfigure}[b]{0.2\textwidth}
 		\includegraphics[width=\textwidth]{hw2_1-3_1.pdf}
 		\caption{Accuracy}
 	\end{subfigure}
@@ -143,7 +144,7 @@ which is equivalent to maximizing the margin while penalizing classification err
 $$\tilde{L}(a) = \sum_n a_n - \frac{1}{2} \sum_n \sum_m a_na_m y_ny_m K(x_n,x_m) = 1^T a - \frac{1}{2} a^T(YKY)a$$
 where we define $a = (a_1, \dots, a_n)$, $Y = diag(y)$, and $1 = (1, \dots, 1)$, with the kernel:
 $$K(x,x') = x^Tx'$$
-This Lagrangian is then maximized with the constraints $0\leq a_n \leq C$ and $\sum_n a_ny_n = 0$.
+This Lagrangian is then maximized with the constraints $0\leq a_n \leq C$ and $\sum_n a_ny_n = 0$, and can be solved using a standard quadratic programming (QP) algorithm.
 
 \subsection{Implementation Tests} For a simple dataset given in {\bf Figure 4(a)}, we achieve a dual objective value of $-0.154$, and find that the Lagrange multiplier values are (approximately) $ \alpha = (0.154, 0, 0.154, 0)$, so that the support vectors are the first and third examples. {\bf Figure 4(b)} makes this claim appear reasonable, as a hyperplane separating the sets of points would be closest to the first and third examples, as the solutions indicate.
 
@@ -158,14 +159,14 @@ $x_1$ & $x_2$ & $y$ \\\hline
 0 & -1 & -1\\
 -3 & -2 & -1\\\hline
 \end{tabular}
-\vspace{0.3in}
+\vspace{0.15in}
 \caption{}
 \end{subfigure}
-\begin{subfigure}[b]{0.3\textwidth}
+\begin{subfigure}[b]{0.2\textwidth}
 \includegraphics[width=\textwidth]{hw2-2_1-1.png}
 \caption{}
 \end{subfigure}
-\begin{subfigure}[b]{0.3\textwidth}
+\begin{subfigure}[b]{0.2\textwidth}
 	\includegraphics[width=\textwidth]{hw2_2-2_acc.pdf}
 	\caption{}
 \end{subfigure}
@@ -197,7 +198,11 @@ Moreover, {\bf Figure 5} depicts the resulting decision boundaries for the train
 	\caption{Decision boundaries for the training set for artificial datasets 1 through 4, using linear SVM with $C = 1$.}
 \end{figure}
 
-\subsection{Hyperparameters for Linear and Gaussian RBF Kernels}
+\subsection{Hyperparameters for Linear and Gaussian RBF Kernels} We now investigate the dependence of the solutions found by the SVM depend on the hyperparameters of the classifier. We employ the kernelized dual SVM with the Lagrangian $\tilde{L}(a)$ provided above, with two different kernels: 1) the linear kernel $K(x,x') = x^Tx$ as employed above, and 2) the Gaussian radial basis function (RBF) kernel $K(x,x') = \exp(-\gamma \|x-x'\|^2)$. Thus, we vary the hyperparameter $C = 10^{-2}, 10^{-1}, \dots, 10^2$ for both kernel models, and for the Gaussian kernel we also vary the kernel bandwidth $\gamma = 10^{-3}, 10^{-2}, \dots, 10^2$.
+
+Our results are demonstrated in {\bf Figure 6}, where we have displayed the hyperparameters on the logarithmic scale for illustration. We see that for the linear kernel, a increase in the slack penalty $C$ yields a smaller margin size as well as decrease in the number of support vectors. This makes intuitive sense, since increasing $C$ leads to less penalization of the $L_2$ norm of the weights, which leads to larger $\|w\|^2$ and thus smaller margins $1/\|w\|$. With smaller margins, we will tend to have fewer points inside or on the margin since it is a linear hyperplane, so the number of support vectors correspondingly decreases with $C$ as well.
+
+For the Gaussian kernel, we again see that increasing $C$ while keeping $\gamma$ fixed yields a smaller margin size as expected. However, there are more complex dependencies because of the nonlinearity of the kernel as well as the dependence on an additional hyperparameter ($\gamma$). Indeed, we note that it is not necessarily the case that the number of support vectors declines as $C$ increases, and there is also no consistent trend in the dependence of margins or support vectors on $\gamma$. In general, margin sizes appear to decrease with $\gamma$ for a fixed $C$, while the number of support vectors increases with $\gamma$. This last observation is explained by the fact that a larger $\gamma$ corresponds to less influence of each point on the predictor, so that more support vectors are needed to make an accurate prediction. However, note that for the Gaussian kernel, these relationships are not necessarily monotone; for certain values of $C$, increasing $\gamma$ may yield a temporary decline in the number of support vectors, despite the overall tendency.
 
 \begin{figure}[b]
 	\centering
@@ -223,7 +228,7 @@ Moreover, {\bf Figure 5} depicts the resulting decision boundaries for the train
 
 \section{Support Vector Machine with Pegasos}
 
-An equivalent formulation of the linear SVM (C-SVM) employed in Section 2 is the Soft-SVM using hinge loss. That is, the objective of the C-SVM:
+An equivalent formulation of the linear SVM with slack constraints (C-SVM) employed in Section 2 is the Soft-SVM using hinge loss. That is, the objective of the C-SVM:
 $$\min_w C \sum_n \xi_n+ \frac{1}{2}\|w\|^2$$
 can equivalently be written in terms of the hinge loss as:
 $$\min_w \frac{\lambda}{2} \|w\|^2  + \sum_n [1-y_n(w^Tx_n)]_+$$
@@ -262,34 +267,139 @@ where the right-hand side is the dual form of the kernelized Soft-SVM with the k
 $$w^T\phi(x) = \sum_n a_n y_n \phi(x_n)^T\phi(x) = \sum_n a_n y_n K(x_n,x)$$
 using our output values of $a$ from Pegasos to make the prediction. As we have shown, this formulation is exactly equivalent to the dual C-SVM, so the same sparsity properties apply. Though dependent on the choice of basis function (i.e. kernel), it is expected that the kernelized Soft-SVM will yield relatively sparse solutions in terms of $a$, since the nonzero weights are only placed on support vectors.
 
+\begin{wrapfigure}{L}{0.3\textwidth}
+	\centering
+	\includegraphics[width=0.23\textwidth]{hw2_3-4_sv.pdf}
+	\caption{Number of support vectors as $\gamma$ varies on Soft-SVM.}
+\end{wrapfigure}
+
 \subsection{Hyperparameter Dependence of Kernelized Soft-SVM} To demonstrate this behavior, we again return to Gaussian radial basis functions (RBFs) by employing a Gaussian kernel in the kernelized Soft-SVM. We focus on the dependence of the sparsity and decision boundary properties on the choice of kernel, i.e. varying the bandwidth values of the Gaussian kernel, so we fix $\lambda = 0.02$ for all experiments, and instead let $\gamma$ vary from $2^2$ to $2^{-2}$.
+
+As shown in {\bf Figure 8}, the number of support vectors increases monotonically with the kernel bandwidth $\gamma$. This is to be expected, as $\gamma \propto 1/\sigma^2$ for the Gaussian kernel, so as $\gamma$ increases, $\sigma^2$ decreases, and each point $x_n$ in the dataset has less influence on the prediction. Because each point is less influential, we require more points in order to make an effective prediction, which yields the increase in the number of support vectors utilized by the classifier in considering the decision boundary.\\
+
+\section{Handwritten Digit Recognition with MNIST}
+
+We now compare the classifiers considered in this paper, broadly the logistic regression and SVM models, on a real dataset. In particular, we consider the popular MNIST dataset, which contains $28\times 28$ pixel images of handwritten digits from 0-9. These images are represented as a 784-length vector, with each component specifying the grayscale value of each pixel, ranging from 0 to 255. For all experiments, we use 200 examples (total) from each category (i.e. digit '4' or 'even numbers') for the training set, 150 examples for the validation set, and 150 examples for the test set analogously. Namely, to classify the digits '1' and '7', we use 200 examples of handwritten '1' images and 200 examples of '7' images for the training set, and so forth.
+
+In order to obtain an apples-to-apples comparison, we vary the slack penalty $C$ for the C-SVM and use the corresponding regularization term:
+$$\lambda \equiv \frac{1}{nC}$$
+for the logistic regression model. We also consider both $L_1$ and $L_2$ regularizers for the logistic regression classifier in our experiments.
+
+\subsection{Linear SVM vs. Logistic Regression} We compared a number of potential binary classification problems based on the MNIST dataset. To encompass visually challenging examples, our experiments considered: '1' vs. '7', '3' vs. '5', '4' vs. '9', and the overall 'even' vs. 'odd' example.
+
+Our results are shown in {\bf Figure 9}, where we see that for all examples, all of the classifiers considered achieve perfect classification accuracy on the training set. On the test set, however, though the classifiers generally achieve very high classification accuracy ($> 90\%$), they vary in their performance across hyperparameter settings and datasets. For example, on the '1' vs. '7' task, all classifiers achieve $\geq 99\%$ accuracy on good hyperparameter settings. However, on the '3' vs. '5' task, the linear SVM barely achieves $90\%$ accuracy across all hyperparameter settings, with the logistic regression classifier performing uniformly better on accuracy. However, on tasks such as '4' vs. '9' and 'even' vs. 'odd', the SVM performed better than either logistic regression classifier (especially with $L_1$ regularization) on a number of $C$ settings. In fact, the linear SVM uniformly dominates the $L_2$-regularized logistic regression classifier on the 'even' vs. 'odd' task.
+
+Interestingly, normalizing the images to lie within $[-1,1]$ via a simply linear normalization:
+$$\tilde{p}_i = \frac{2\cdot p_i}{255} - 1$$
+yields very different results, as demonstrated in {\bf Figure 10}. To start, the classifiers do not necessarily achieve perfect classification accuracy across all parameter settings. It is notable that the $L_2$ logistic classifier and linear SVM dominate the $L_1$ logistic classifier on training performance, but the $L_2$ logistic classifier is approximately dominated by the $L_1$ and SVM classifiers on the test set. Moreover, there is strong dependence on the slack penalty $C$; as expected, lower values of $C$ place less emphasis on the classification accuracy of the training set, and therefore result in lower accuracy particularly for the $L_1$ classifier. However, the generalization provided by a lower $C$ value yields better performance on the test set for the $L_2$-regularized and SVM classifiers, but interestingly not for the $L_1$-regularized classifier.
+
+To understand situations in which the classifiers perform poorly, we examine examples that all of the classifiers failed to classify correctly. {\bf Figure 11} shows one such example from each task. It is interesting to note that there are evident features of each incorrectly classified example that are present in the correctly classified example of the other class. for example, for the '1' vs. '7' task, the incorrectly classified '1' image has a tilted stem, which is reminiscent of the stem of the '7' image below. Thus, it appears that the classifiers do perform reasonably, and even when incorrect make predictions based on a features contained in the other class. 
+
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_4-1_1v7.pdf}
+		\caption{'1' vs. '7'}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_4-1_3v5.pdf}
+		\caption{'3' vs. '5'}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_4-1_4v9.pdf}
+		\caption{'4' vs. '9'}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_4-1_evo.pdf}
+		\caption{'Even' vs. 'Odd'}
+	\end{subfigure}
+	\caption{Classification accuracy on the training and test sets using $L_1$ or $L_2$ logistic regression and linear SVM, for the various binary classification examples given in Section 4.1.}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_4-1_1v7_norm.pdf}
+		\caption{'1' vs. '7'}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_4-1_3v5_norm.pdf}
+		\caption{'3' vs. '5'}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_4-1_4v9_norm.pdf}
+		\caption{'4' vs. '9'}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_4-1_evo_norm.pdf}
+		\caption{'Even' vs. 'Odd'}
+	\end{subfigure}
+	\caption{Classification accuracy with the same setup as in Figure 9, except with normalized images as described in the text.}
+\end{figure}
 
 \begin{figure}[b]
 	\centering
-	\begin{subfigure}[b]{0.23\textwidth}
-		\includegraphics[width=\textwidth]{hw2_3-4_sv.pdf}
-		\caption{Number of support vectors}
+	\begin{subfigure}[b]{0.25\textwidth}
+		\centering
+		\includegraphics[width=0.6\textwidth]{hw2_4-1_1v7_ex.pdf}
+		\caption{'1' Wrong}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.23\textwidth}
-		\includegraphics[width=\textwidth]{hw2_3-4_0.pdf}
-		\caption{$\lambda = 2^{-10}$}
+	\begin{subfigure}[b]{0.25\textwidth}
+		\centering
+		\includegraphics[width=0.6\textwidth]{hw2_4-1_3v5_ex.pdf}
+		\caption{'3' Wrong}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.23\textwidth}
-		\includegraphics[width=\textwidth]{hw2_3-4_2.pdf}
-		\caption{$\lambda = 2^{-5}$}
+	\begin{subfigure}[b]{0.25\textwidth}
+		\centering
+		\includegraphics[width=0.6\textwidth]{hw2_4-1_4v9_ex.pdf}
+		\caption{'4' Wrong}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.23\textwidth}
-		\includegraphics[width=\textwidth]{hw2_3-4_4.pdf}
-		\caption{$\lambda = 1$}
+	\begin{subfigure}[b]{0.25\textwidth}
+		\centering
+		\includegraphics[width=0.6\textwidth]{hw2_4-1_1v7_ex2.pdf}
+		\caption{'7' Correct}
 	\end{subfigure}
-	\caption{(a): Number of support vectors as $\gamma$ varies. (b, c, d): Decision boundaries for the training set in artificial dataset 3, with varying kernel bandwidths.}
+	\begin{subfigure}[b]{0.25\textwidth}
+		\centering
+		\includegraphics[width=0.6\textwidth]{hw2_4-1_3v5_ex5.pdf}
+		\caption{'5' Correct}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.25\textwidth}
+		\centering
+		\includegraphics[width=0.6\textwidth]{hw2_4-1_4v9_ex2.pdf}
+		\caption{'9' Correct}
+	\end{subfigure}
+	\caption{Incorrectly classified image for each task by all 3 classifiers, with a correctly classified image of the other class underneath.}
 \end{figure}
 
-As shown in {\bf Figure 8(a)}, the number of support vectors increases monotonically with the kernel bandwidth $\gamma$. This is to be expected, as $\gamma \propto 1/\sigma^2$ for the Gaussian kernel, so as $\gamma$ increases, $\sigma^2$ decreases, and each point $x_n$ in the dataset has less influence on the prediction. Because each point is less influential, we require more points in order to make an effective prediction, which yields the increase in the number of support vectors utilized by the classifier.
+\subsection{Comparisons with Gaussian RBF Kernel} We further explore the use of nonlinear kernels for the digit classification tasks using the Gaussian RBF kernel. We vary both $C$, the slack penalty, and $\gamma$, the kernel bandwidth; we then train the classifiers on the training set with fixed hyperparameters, and select the hyperparameters that yield the most accurate classifiers on the validation set.
 
-{\bf Figures 8(b)-(d)} illustrate ... 
+Our results on the validation and test sets are provided in {\bf Figure 12}, where we present the results on the '1' vs. '7' digit task due to space constraints. Interestingly, we find that despite the additional freedom of the $\gamma$ hyperparameter, the Gaussian RBF classifier actually performs worse than the linear classifiers (logistic regression or linear SVM) on both the validation and test sets. Interestingly, this effect is completely nullified (or even reversed) when the images are first normalized, leading all classifiers to achieve near-perfect performance on both the test and validation sets, and the Gaussian RBF classifier to yield marginally better performance on the test set.
 
-\section{Handwritten Digit Recognition with MNIST}
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_4-2_valid.pdf}
+		\caption{Validation set}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_4-2_test.pdf}
+		\caption{Test set}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_4-2_valid_norm.pdf}
+		\caption{Valid set (normalized)}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.23\textwidth}
+		\includegraphics[width=\textwidth]{hw2_4-2_test_norm.pdf}
+		\caption{Test set (normalized)}
+	\end{subfigure}
+	\caption{Results on the test set for classifiers with optimal hyperparameters as evaluated on the validation set: 1 is $L_1$-regularized logistic classifier; 2 is $L_2$-regularized; 3 is the linear SVM; and 4 is the Gaussian RBF kernel SVM.}
+\end{figure}
+
+\subsection{Accuracy and Running Times of Pegasos and QP} Finally, we compare the dual C-SVM implementation optimized via the CVX quadratic programming library to the Soft-SVM implementation using Pegasos, in terms of both classification accuracy and running time. We experiment with both linear and Gaussian kernels, and employ the value of the kernel bandwidth $\gamma = 1$ for the Gaussian kernel that was selected on the validation set in the previous experiments.
+
+Our results are illustrated in {\bf Figure 13}, 
 
 
 \end{document}

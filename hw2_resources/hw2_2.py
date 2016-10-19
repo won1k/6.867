@@ -79,7 +79,7 @@ plt.savefig('hw2-2_3_linsv.pdf')
 plotC = [[np.log(C)]*len(gammas) for C in Cs]
 plotC = [item for sublist in plotC for item in sublist]
 plotGammas = np.log(gammas*len(Cs))
-print(gaus_margins)
+gaus_margins = [margin[0][0] for margin in gaus_margins]
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 ax.plot_trisurf(plotGammas, plotC, gaus_margins)

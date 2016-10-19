@@ -56,10 +56,21 @@ def predictSVM(x, a, X, y):
 	sv = [i for i in range(n) if a[i] > 1e-5]
 	b = 0
 	K = np.dot(X, np.transpose(X))
-	for i in sv:
-		med = np.dot(np.transpose(a*y),K[i,:])
-		b += y[i] - med
-	b /= len(sv)
+	if len(sv) > 0:
+		for i in sv:
+			med = np.dot(np.transpose(a*y),K[i,:])
+			b += y[i] - med
+		b /= len(sv)
 
 	pred = np.dot(w,x) + b
 	return(1 if pred > 0 else -1)
+
+def predictKernelSVM(x, a, K, X, y):
+	n = len(y)
+	pred = 0
+	for i in range(n):
+		pred += a[i] * y[i] * K(x, X[i,:])
+	return(1 if pred > 0 else -1)
+
+
+
