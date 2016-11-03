@@ -1,7 +1,8 @@
 import numpy as np
 import nn
-from plotBoundary import *
-import pylab as pl
+from plotBoundary2 import *
+#import pylab as pl
+import matplotlib.pyplot as pl
 
 # Load data
 n = 1
