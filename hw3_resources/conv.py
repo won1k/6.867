@@ -12,6 +12,17 @@ NUM_CHANNELS = 3
 NUM_LABELS = 11
 INCLUDE_TEST_SET = False
 
+# Hyperparameters
+filter1 = int(sys.argv[1])
+stride1 = int(sys.argv[2])
+depth1  = int(sys.argv[3])
+filter2 = int(sys.argv[4])
+stride2 = int(sys.argv[5])
+depth2  = int(sys.argv[6])
+hdim    = int(sys.argv[7])
+psize   = int(sys.argv[8])
+pstride = int(sys.argv[9])
+
 class ArtistConvNet:
 	def __init__(self, invariance=False):
 		'''Initialize the class by loading the required datasets 
@@ -24,23 +35,23 @@ class ArtistConvNet:
 		self.define_tensorflow_graph()
 
 	def define_tensorflow_graph(self):
-		print '\nDefining model...'
+		#print '\nDefining model...'
 		
 		# Hyperparameters
 		batch_size = 10
 		learning_rate = 0.01
-		layer1_filter_size = 5
-		layer1_depth = 16
-		layer1_stride = 2
-		layer2_filter_size = 5
-		layer2_depth = 16
-		layer2_stride = 2
-		layer3_num_hidden = 64
-		layer4_num_hidden = 64
+		layer1_filter_size = filter1
+		layer1_depth = depth1
+		layer1_stride = stride1
+		layer2_filter_size = filter2
+		layer2_depth = depth2
+		layer2_stride = stride2
+		layer3_num_hidden = hdim
+		layer4_num_hidden = hdim
 		num_training_steps = 1501
 
 		# Add max pooling
-		pooling = False
+		pooling = True
 		layer1_pool_filter_size = 2
 		layer1_pool_stride = 2
 		layer2_pool_filter_size = 2
@@ -48,7 +59,7 @@ class ArtistConvNet:
 
 		# Enable dropout and weight decay normalization
 		dropout_prob = 1.0 # set to < 1.0 to apply dropout, 1.0 to remove
-		weight_penalty = 0.0 # set to > 0.0 to apply weight penalty, 0.0 to remove
+		weight_penalty = 0.001 # set to > 0.0 to apply weight penalty, 0.0 to remove
 
 		with self.graph.as_default():
 			# Input data
@@ -136,7 +147,9 @@ class ArtistConvNet:
 				'''Train the model with minibatches in a tensorflow session'''
 				with tf.Session(graph=self.graph) as session:
 					tf.initialize_all_variables().run()
-					print 'Initializing variables...'
+					#print 'Initializing variables...'
+					best_acc = 0.0
+					curr_acc = 0.0
 					
 					for step in range(num_steps):
 						offset = (step * batch_size) % (self.train_Y.shape[0] - batch_size)
@@ -150,10 +163,14 @@ class ArtistConvNet:
 						  [optimizer, loss, train_prediction], feed_dict=feed_dict)
 						if (step % 100 == 0):
 							val_preds = session.run(valid_prediction, feed_dict={dropout_keep_prob : 1.0})
-							print ''
-							print('Batch loss at step %d: %f' % (step, l))
-							print('Batch training accuracy: %.1f%%' % accuracy(predictions, batch_labels))
-							print('Validation accuracy: %.1f%%' % accuracy(val_preds, self.val_Y))
+							curr_acc = accuracy(val_preds, self.val_Y)
+							if curr_acc > best_acc:
+								best_acc = curr_acc
+							#print ''
+							#print('Batch loss at step %d: %f' % (step, l))
+							#print('Batch training accuracy: %.1f%%' % accuracy(predictions, batch_labels))
+							#print('Validation accuracy: %.1f%%' % accuracy(val_preds, self.val_Y))
+					print('%d,%d,%d,%d,%d,%d,%d,%.2f,%.2f' % (filter1,stride1,depth1,filter2,stride2,depth2,hdim,curr_acc,best_acc))
 					
 					# This code is for the final question
 					if self.invariance:
@@ -177,7 +194,7 @@ class ArtistConvNet:
 			self.train_model = train_model
 
 	def load_pickled_dataset(self, pickle_file):
-		print "Loading datasets..."
+		#print "Loading datasets..."
 		with open(pickle_file, 'rb') as f:
 			save = pickle.load(f)
 			self.train_X = save['train_data']
@@ -189,8 +206,8 @@ class ArtistConvNet:
 				self.test_X = save['test_data']
 				self.test_Y = save['test_labels']
 			del save  # hint to help gc free up memory
-		print 'Training set', self.train_X.shape, self.train_Y.shape
-		print 'Validation set', self.val_X.shape, self.val_Y.shape
+		#print 'Training set', self.train_X.shape, self.train_Y.shape
+		#print 'Validation set', self.val_X.shape, self.val_Y.shape
 		if INCLUDE_TEST_SET: print 'Test set', self.test_X.shape, self.test_Y.shape
 
 	def load_invariance_datasets(self):
@@ -218,8 +235,8 @@ if __name__ == '__main__':
 		print "Testing finished model on invariance datasets!"
 		invariance = True
 	
-	t1 = time.time()
+	#t1 = time.time()
 	conv_net = ArtistConvNet(invariance=invariance)
 	conv_net.train_model()
-	t2 = time.time()
-	print "Finished training. Total time taken:", t2-t1
+	#t2 = time.time()
+	#print "Finished training. Total time taken:", t2-t1

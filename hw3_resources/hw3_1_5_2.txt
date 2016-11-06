@@ -1,0 +1,24 @@
+(3000, 784)
+Num. layers: 1 Hid. dim: 1 Epochs:  500 Test loss: 3246.69752684 Test accuracy:  0.2
+(3000, 784)
+Num. layers: 2 Hid. dim: 1 Epochs:  439 Test loss: 3246.746668 Test accuracy:  0.2
+(3000, 784)
+Num. layers: 1 Hid. dim: 10 Epochs:  136 Test loss: 2336.47781033 Test accuracy:  0.387333333333
+(3000, 784)
+Num. layers: 2 Hid. dim: 10 Epochs:  127 Test loss: 856.75563571 Test accuracy:  0.886
+(3000, 784)
+Num. layers: 1 Hid. dim: 50 Epochs:  95 Test loss: 518.401605034 Test accuracy:  0.944
+(3000, 784)
+Num. layers: 2 Hid. dim: 50 Epochs:  75 Test loss: 477.075022799 Test accuracy:  0.940666666667
+(3000, 784)
+Num. layers: 1 Hid. dim: 100 Epochs:  79 Test loss: 373.72572086 Test accuracy:  0.955333333333
+(3000, 784)
+Num. layers: 2 Hid. dim: 100 Epochs:  75 Test loss: 447.159795809 Test accuracy:  0.948666666667
+(3000, 784)
+Num. layers: 1 Hid. dim: 500 Epochs:  76 Test loss: 310.136128922 Test accuracy:  0.956
+(3000, 784)
+Num. layers: 2 Hid. dim: 500 Epochs:  73 Test loss: 283.291557722 Test accuracy:  0.96
+(3000, 784)
+Num. layers: 1 Hid. dim: 1000 Epochs:  77 Test loss: 300.946420602 Test accuracy:  0.96
+(3000, 784)
+Num. layers: 2 Hid. dim: 1000 Epochs:  73 Test loss: 308.170938502 Test accuracy:  0.959333333333

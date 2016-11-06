@@ -95,6 +95,11 @@ class NN(object):
 		prob = self.outputL.forward(x)
 		return (1 if prob[1] > prob[0] else -1)
 
+	def predictprob(self, x):
+		for i in range(self.nlayers):
+			x = self.hiddenL[i].forward(x)
+		prob = self.outputL.forward(x)
+		return prob
 
 
 
