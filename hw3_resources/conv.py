@@ -20,8 +20,7 @@ filter2 = int(sys.argv[4])
 stride2 = int(sys.argv[5])
 depth2  = int(sys.argv[6])
 hdim    = int(sys.argv[7])
-psize   = int(sys.argv[8])
-pstride = int(sys.argv[9])
+pstride = int(sys.argv[8])
 
 class ArtistConvNet:
 	def __init__(self, invariance=False):
@@ -53,9 +52,9 @@ class ArtistConvNet:
 		# Add max pooling
 		pooling = True
 		layer1_pool_filter_size = 2
-		layer1_pool_stride = 2
+		layer1_pool_stride = pstride
 		layer2_pool_filter_size = 2
-		layer2_pool_stride = 2
+		layer2_pool_stride = pstride
 
 		# Enable dropout and weight decay normalization
 		dropout_prob = 1.0 # set to < 1.0 to apply dropout, 1.0 to remove
@@ -170,7 +169,7 @@ class ArtistConvNet:
 							#print('Batch loss at step %d: %f' % (step, l))
 							#print('Batch training accuracy: %.1f%%' % accuracy(predictions, batch_labels))
 							#print('Validation accuracy: %.1f%%' % accuracy(val_preds, self.val_Y))
-					print('%d,%d,%d,%d,%d,%d,%d,%.2f,%.2f' % (filter1,stride1,depth1,filter2,stride2,depth2,hdim,curr_acc,best_acc))
+					print('%d,%d,%d,%d,%d,%d,%d,%d,%.2f,%.2f' % (filter1,stride1,depth1,filter2,stride2,depth2,hdim,pstride,curr_acc,best_acc))
 					
 					# This code is for the final question
 					if self.invariance:
